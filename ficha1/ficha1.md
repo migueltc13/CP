@@ -362,6 +362,10 @@ f \circ \text{id}        &= \text{id} \circ f = f
 \end{align*}
 $$
 
+<div align="center">
+    <img src=".assets/natural-id.png" alt="Natural ID" width="180">
+</div>
+
 <div style="page-break-after: always;"></div>
 
 ## Exercício 7
