@@ -271,7 +271,7 @@ $$
 > Mostre que $(f \circ g) \circ h = f \circ (g \circ h)$,
 quaisquer que sejam $f$, $g$ e $h$.
 
-### Resolução 5 (dedução)
+### Resolução 5
 
 $$
 \begin{align*}
@@ -292,11 +292,11 @@ $$
 \end{align*}
 $$
 
-### Resolução 5 (indução)
+### Resolução 5 (alternativa)
 
 $$
 \begin{align*}
-\text{Hipótese de indução} \quad
+\text{Assume-se que} \quad
 &(f \circ g) \circ h = f \circ (g \circ h)                                                     \\
 &\equiv                                                            \tag{Igualdade extensional} \\
 &\forall x, \; ((f \circ g) \circ h) \; x = (f \circ (g \circ h)) \; x                         \\
@@ -362,8 +362,10 @@ f \circ \text{id}        &= \text{id} \circ f = f
 \end{align*}
 $$
 
+---
+
 <div align="center">
-    <img src=".assets/natural-id.png" alt="Natural ID" width="180">
+    <img src=".assets/natural-id.png" alt="Natural ID" width="170">
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -495,5 +497,5 @@ o que significa que `nub` pode operar corretamente sobre ela.
 Deste modo, não é necessário alterar a função `store`
 para que esta funcione corretamente.
 
-A propriedade de Haskell evidenciada neste exemplo é o **polimorfismo (ad-hoc)**.
+A propriedade de Haskell evidenciada neste exemplo é o **polimorfismo paramétrico**.
 
