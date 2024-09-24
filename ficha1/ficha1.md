@@ -63,7 +63,7 @@ funções que estudou em PF:
 ```hs
 map :: (a -> b) -> [a] -> [b]
 map _ [] = []
-map f (x:xs) = f a : map f xs
+map f (x:xs) = f x : map f xs
 ```
 
 ```hs
