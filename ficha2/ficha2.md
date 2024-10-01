@@ -42,6 +42,8 @@ f \; ((a, b), c) &= (a \land b) \oplus c                                        
 \end{align*}
 $$
 
+<div style="page-break-after: always;"></div>
+
 #### b)
 
 $$
@@ -66,6 +68,8 @@ $$
 <div align="center">
   <img src=".assets/1-b.png" alt="Diagrama do tipo da função g">
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 2
 
@@ -97,6 +101,8 @@ Tabela de verdade:
 | 1   | 0   | 1   | 1                        |
 | 1   | 1   | 0   | 1                        |
 | 1   | 1   | 1   | 0                        |
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 3
 
@@ -140,6 +146,8 @@ $f \; : \; \mathbb{B} + (\mathbb{B} \times \text{Int}) \to \text{X}$
 <div align="center">
   <img src=".assets/3.png" alt="Diagrama do tipo da função f">
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 4
 
@@ -207,6 +215,8 @@ $$
 \end{align*}
 $$
 
+<div style="page-break-after: always;"></div>
+
 ## Exercício 5
 
 > Derive a partir de (F2) a lei
@@ -239,6 +249,8 @@ k \circ f &= k \circ f
 \right. \quad \text{c.q.m.}
 \end{align*}
 $$
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 6
 
@@ -279,6 +291,8 @@ $$
 \end{align*}
 $$
 
+<div style="page-break-after: always;"></div>
+
 ## Exercício 7
 
 > Considere a função:
@@ -314,6 +328,8 @@ $$
 <div align="center">
   <img src=".assets/7-extra.png" alt="Diagrama do tipo da função xr">
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 8
 
@@ -357,6 +373,8 @@ $$
 \end{align*}
 $$
 
+<div style="page-break-after: always;"></div>
+
 ## Exercício 9
 
 > Determine o tipo da função $\alpha$ que se segue:
@@ -397,6 +415,8 @@ A composição alternativa condiciona o tipo de saída dos seus argumentos?
 O tipo de $\langle \underline{False}, id \rangle$ tem de ser igual ao de $\langle \underline{True}, id \rangle$?
 
 Se sim então $\alpha : A \to \text{Bool} \times A$?
+
+<div style="page-break-after: always;"></div>
 
 ## Exercício 10
 
