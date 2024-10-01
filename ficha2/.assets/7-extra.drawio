@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" version="24.7.17">
+  <diagram name="Page-1" id="8x4MicqjeGiNOcLGt8TJ">
+    <mxGraphModel dx="766" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F1cqkfS3BarPNqulVMXe-1" value="&lt;div&gt;$$(A \times B) \times C$$&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="400" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-3" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="F1cqkfS3BarPNqulVMXe-1" target="F1cqkfS3BarPNqulVMXe-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="300" as="sourcePoint" />
+            <mxPoint x="330" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-6" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="F1cqkfS3BarPNqulVMXe-1" target="F1cqkfS3BarPNqulVMXe-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="170" as="sourcePoint" />
+            <mxPoint x="510" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-7" value="&lt;div&gt;$$A \times C$$&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="280" y="240" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-8" value="&lt;div&gt;$$B$$&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="510" y="240" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-9" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="F1cqkfS3BarPNqulVMXe-1" target="F1cqkfS3BarPNqulVMXe-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="300" as="sourcePoint" />
+            <mxPoint x="420" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-10" value="&lt;div&gt;$$(A \times C) \times B$$&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="240" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-12" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="F1cqkfS3BarPNqulVMXe-10" target="F1cqkfS3BarPNqulVMXe-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="410" as="sourcePoint" />
+            <mxPoint x="370" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F1cqkfS3BarPNqulVMXe-13" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="F1cqkfS3BarPNqulVMXe-10" target="F1cqkfS3BarPNqulVMXe-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="360" as="sourcePoint" />
+            <mxPoint x="520" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;div&gt;$$\pi_2 \circ \pi_1$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-14">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
+            <mxGeometry x="465" y="170" width="50" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div&gt;$$\pi_1 \times id$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-16">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
+            <mxGeometry x="320" y="170" width="60" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div&gt;$$\text{xr}$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-17">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
+            <mxGeometry x="411" y="175" width="40" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div&gt;$$\pi_1$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-18">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
+            <mxGeometry x="340" y="240" width="40" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div&gt;$$\pi_2$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-19">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
+            <mxGeometry x="460" y="240" width="40" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
