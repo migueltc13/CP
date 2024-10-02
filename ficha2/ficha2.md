@@ -1,4 +1,4 @@
-# CP - Ficha 2 - 18/09/2024
+# CP - Ficha 2
 
 ## Exercício 1
 
@@ -366,10 +366,21 @@ $$
 \pi_2 \circ \underline{(b, a)} = \underline{a}
 \end{aligned}
 \right. \\
-&\equiv \\
-&\underline{(b, a)} = (\underline{b}, \underline{a}) \\
-&\equiv \\
-&\underline{(b, a)} = \underline{(b, a)}
+&\equiv \tag{4: Absorção-const} \\
+&\left\{
+\begin{aligned}
+\pi_1 \circ \underline{(b, a)} = \underline{b} \\
+\pi_2 \circ \underline{(b, a)} = \underline{a} \\
+\end{aligned}
+\right. \\
+&\equiv \tag {79: Def-proj} \\
+&\left\{
+\begin{aligned}
+&\underline{b} = \underline{b} \\
+&\underline{a} = \underline{a}
+\end{aligned}
+\right.
+\quad \text{c.q.m.}
 \end{align*}
 $$
 
@@ -398,23 +409,26 @@ $$
 \end{align*}
 $$
 
-Temos assim:
+No entanto a composição alternativa condiciona o tipo de saída dos seus argumentos.
+
+Temos:
 
 $$
-\alpha : A + B \to \text{Bool} \times (A + B)
+\begin{align*}
+\underline{True}                      &: A \to \text{Bool} \\
+\langle \underline{True},  id \rangle &: \text{A} \to \text{Bool} \times \text{A}
+\end{align*}
+$$
+
+Logo o tipo de $\alpha$ é:
+
+$$
+\alpha : A + A \to \text{Bool} \times A
 $$
 
 <div align="center">
   <img src=".assets/9.png" alt="Diagrama do tipo da função α">
 </div>
-
-**Dúvida**
-
-A composição alternativa condiciona o tipo de saída dos seus argumentos?
-
-O tipo de $\langle \underline{False}, id \rangle$ tem de ser igual ao de $\langle \underline{True}, id \rangle$?
-
-Se sim então $\alpha : A \to \text{Bool} \times A$?
 
 <div style="page-break-after: always;"></div>
 
