@@ -462,5 +462,10 @@ any function available from module $Cp.hs$ \
 
 ```haskell
 acronym = map head . words
-short = (\ws -> head ws ++ " " ++ last ws) . words
+short = uncurry (++) . split head ((" " ++) . last) . words
 ```
+
+<div align = "center">
+  <img src=".assets/acronym.png" alt="Diagrama da função acronym">
+  <img src=".assets/short.png" alt="Diagrama da função short">
+</div>
