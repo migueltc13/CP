@@ -1,4 +1,4 @@
-# CP - Ficha 1 - 18/09/2024
+# CP - Ficha 1
 
 ## Exercício 1
 
@@ -102,7 +102,7 @@ flip f x y = f y x
 > $$
 > \left\{
 > \begin{align*}
-> f \; x &= 2 \times x \\
+> f \; x &= 2 * x \\
 > g \; x &= x + 1
 > \end{align*}
 > \right.
@@ -110,7 +110,7 @@ flip f x y = f y x
 > \left\{
 > \begin{align*}
 > f      &= succ       \\
-> g \; x &= 2 \times x
+> g \; x &= 2 * x
 > \end{align*}
 > \right.
 > \quad
@@ -124,7 +124,7 @@ flip f x y = f y x
 > \left\{
 > \begin{align*}
 > g \; (x,y) &= x + y                 \\
-> f          &= succ \circ (2 \times)
+> f          &= succ \circ (2 *)
 > \end{align*}
 > \right.
 > $$
@@ -137,16 +137,16 @@ flip f x y = f y x
 
 $$
 \begin{align*}
-f \; x &= 2 \times x \quad &\text{Assume-se que: } f &:: \text{Int} \to \text{Int} \\
-g \; x &= x + 1      \quad                        &g &:: \text{Int} \to \text{Int}
+f \; x &= 2 * x \quad &\text{Assume-se que: } f &:: \text{Int} \to \text{Int} \\
+g \; x &= x + 1 \quad                        &g &:: \text{Int} \to \text{Int}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; x)    \tag{F1}           \\
-                 &= f \; (x + 1)     \tag{Def. \( g \)} \\
-                 &= 2 \times (x + 1) \tag{Def. \( f \)} \\
+(f \circ g) \; x &= f \; (g \; x) \tag{F1}           \\
+                 &= f \; (x + 1)  \tag{Def. \( g \)} \\
+                 &= 2 *  (x + 1)  \tag{Def. \( f \)} \\
                  &= 2x + 2
 \end{align*}
 $$
@@ -159,7 +159,7 @@ $$
 $$
 \begin{align*}
 f      &= \text{succ} \quad &\text{Assume-se que: } f &:: \text{Int} \to \text{Int} \\
-g \; x &= 2 \times x  \quad                        &g &:: \text{Int} \to \text{Int}
+g \; x &= 2 * x       \quad                        &g &:: \text{Int} \to \text{Int}
 \end{align*}
 $$
 
@@ -170,9 +170,9 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; x)            \tag{F1}           \\
-                 &= f \; (2 \times x)        \tag{Def. \( g \)} \\
-                 &= \text{succ }(2 \times x) \tag{Def. \( f \)} \\
+(f \circ g) \; x &= f \; (g \; x)       \tag{F1}           \\
+                 &= f \; (2 * x)        \tag{Def. \( g \)} \\
+                 &= \text{succ }(2 * x) \tag{Def. \( f \)} \\
                  &= 2x + 1
 \end{align*}
 $$
@@ -184,7 +184,7 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) &= \text{succ} \circ (2 \times) \\
+(f \circ g) &= \text{succ} \circ (2 *) \\
 \end{align*}
 $$
 
@@ -195,7 +195,7 @@ $$
 $$
 \begin{align*}
 f &= \text{succ} &\equiv \forall x, \; f \; x &= \text{succ } x \tag{Igualdade extensional} \\
-g &= (2 \times)  &\equiv \forall x, \; g \; x &= 2 \times x     \tag{Igualdade extensional}
+g &= (2 *)       &\equiv \forall x, \; g \; x &= 2 * x          \tag{Igualdade extensional}
 \end{align*}
 $$
 
@@ -229,8 +229,8 @@ enquanto a função $g$ espera um argumento do tipo `[a]`.
 
 $$
 \begin{align*}
-g \; (x,y) &= x + y                        \quad &\text{Assume-se que: } g &:: (\text{Int}, \text{Int}) \to \text{Int} \\
-f          &= \text{succ} \circ (2 \times) \quad                        &f &:: \text{Int} \to \text{Int}
+g \; (x,y) &= x + y                   \quad &\text{Assume-se que: } g &:: (\text{Int}, \text{Int}) \to \text{Int} \\
+f          &= \text{succ} \circ (2 *) \quad                        &f &:: \text{Int} \to \text{Int}
 \end{align*}
 $$
 
@@ -240,10 +240,10 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; (x,y))                         \tag{F1}           \\
-                 &= f \; (x + y)                              \tag{Def. \( g \)} \\
-                 &= (\text{succ} \circ (2 \times)) \; (x + y) \tag{Def. \( f \)} \\
-                 &= \text{succ }(2 \times (x + y))                               \\
+(f \circ g) \; x &= f \; (g \; (x,y))                    \tag{F1}           \\
+                 &= f \; (x + y)                         \tag{Def. \( g \)} \\
+                 &= (\text{succ} \circ (2 *)) \; (x + y) \tag{Def. \( f \)} \\
+                 &= \text{succ }(2 * (x + y))                               \\
                  &= 2x + 2y + 1
 \end{align*}
 $$
@@ -260,7 +260,7 @@ g \; (x,y)  &= x + y                                                      \\
             &\equiv                           \tag{Igualdade extensional} \\
 g \;        &= \text{uncurry} \; (+)                                      \\
 \text{Logo }
-(f \circ g) &= \text{succ} \circ (2 \times) \circ (\text{uncurry} \; (+))
+(f \circ g) &= \text{succ} \circ (2 *) \circ (\text{uncurry} \; (+))
 \end{align*}
 $$
 
