@@ -95,9 +95,9 @@ flip f x y = f y x
 
 > A **composição** de funções define-se, em Haskell, tal como na matemática:
 >
-> $$ (f \circ g) \; x = f(g \; x) \tag{F1}$$
+> $$ (f \cdot g) \; x = f \; (g \; x) \tag{F1}$$
 >
-> Calcule $(f \circ g) \; x$ para os casos seguintes:
+> Calcule $(f \cdot g) \; x$ para os casos seguintes:
 >
 > $$
 > \left\{
@@ -124,7 +124,7 @@ flip f x y = f y x
 > \left\{
 > \begin{align*}
 > g \; (x,y) &= x + y                 \\
-> f          &= succ \circ (2 *)
+> f          &= succ \cdot (2 *)
 > \end{align*}
 > \right.
 > $$
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; x) \tag{F1}           \\
+(f \cdot g) \; x &= f \; (g \; x) \tag{F1}           \\
                  &= f \; (x + 1)  \tag{Def. \( g \)} \\
                  &= 2 *  (x + 1)  \tag{Def. \( f \)} \\
                  &= 2x + 2
@@ -170,7 +170,7 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; x)       \tag{F1}           \\
+(f \cdot g) \; x &= f \; (g \; x)       \tag{F1}           \\
                  &= f \; (2 * x)        \tag{Def. \( g \)} \\
                  &= \text{succ }(2 * x) \tag{Def. \( f \)} \\
                  &= 2x + 1
@@ -184,7 +184,7 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) &= \text{succ} \circ (2 *) \\
+(f \cdot g) &= \text{succ} \cdot (2 *) \\
 \end{align*}
 $$
 
@@ -212,13 +212,13 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; x)                    \tag{F1}           \\
+(f \cdot g) \; x &= f \; (g \; x)                    \tag{F1}           \\
                  &= f \; (\text{length} \; x)        \tag{Def. \( g \)} \\
                  &= \text{succ }(\text{length} \; x) \tag{Def. \( f \)}
 \end{align*}
 $$
 
-Note que a composição $g \circ f$ não é possível,
+Note que a composição $g \cdot f$ não é possível,
 pois a função $f$ retorna um valor do tipo `Int`,
 enquanto a função $g$ espera um argumento do tipo `[a]`.
 
@@ -230,7 +230,7 @@ enquanto a função $g$ espera um argumento do tipo `[a]`.
 $$
 \begin{align*}
 g \; (x,y) &= x + y                   \quad &\text{Assume-se que: } g &:: (\text{Int}, \text{Int}) \to \text{Int} \\
-f          &= \text{succ} \circ (2 *) \quad                        &f &:: \text{Int} \to \text{Int}
+f          &= \text{succ} \cdot (2 *) \quad                        &f &:: \text{Int} \to \text{Int}
 \end{align*}
 $$
 
@@ -240,9 +240,9 @@ $$
 
 $$
 \begin{align*}
-(f \circ g) \; x &= f \; (g \; (x,y))                    \tag{F1}           \\
+(f \cdot g) \; x &= f \; (g \; (x,y))                    \tag{F1}           \\
                  &= f \; (x + y)                         \tag{Def. \( g \)} \\
-                 &= (\text{succ} \circ (2 *)) \; (x + y) \tag{Def. \( f \)} \\
+                 &= (\text{succ} \cdot (2 *)) \; (x + y) \tag{Def. \( f \)} \\
                  &= \text{succ }(2 * (x + y))                               \\
                  &= 2x + 2y + 1
 \end{align*}
@@ -260,7 +260,7 @@ g \; (x,y)  &= x + y                                                      \\
             &\equiv                           \tag{Igualdade extensional} \\
 g \;        &= \text{uncurry} \; (+)                                      \\
 \text{Logo }
-(f \circ g) &= \text{succ} \circ (2 *) \circ (\text{uncurry} \; (+))
+(f \cdot g) &= \text{succ} \cdot (2 *) \cdot (\text{uncurry} \; (+))
 \end{align*}
 $$
 
@@ -268,17 +268,17 @@ $$
 
 ## Exercício 5
 
-> Mostre que $(f \circ g) \circ h = f \circ (g \circ h)$,
+> Mostre que $(f \cdot g) \cdot h = f \cdot (g \cdot h)$,
 quaisquer que sejam $f$, $g$ e $h$.
 
 ### Resolução 5
 
 $$
 \begin{align*}
-((f \circ g) \circ h) \; x &= (f \circ g) \; (h \; x) \tag{F1} \\
+((f \cdot g) \cdot h) \; x &= (f \cdot g) \; (h \; x) \tag{F1} \\
                            &= f \; (g \; (h \; x))    \tag{F1} \\
 \\
-(f \circ (g \circ h)) \; x &= f \; ((g \circ h) \; x) \tag{F1} \\
+(f \cdot (g \cdot h)) \; x &= f \; ((g \cdot h) \; x) \tag{F1} \\
                            &= f \; (g \; (h \; x))    \tag{F1} \\
 \end{align*}
 $$
@@ -286,9 +286,9 @@ $$
 $$
 \begin{align*}
 \text{Assim, conclui-se que }
-&\forall x, \; ((f \circ g) \circ h) \; x = (f \circ (g \circ h)) \; x \\
+&\forall x, \; ((f \cdot g) \cdot h) \; x = (f \cdot (g \cdot h)) \; x \\
 \text{e, por ig. extensional, temos que }
-&(f \circ g) \circ h                      = f \circ (g \circ h)
+&(f \cdot g) \cdot h                      = f \cdot (g \cdot h)
 \end{align*}
 $$
 
@@ -297,17 +297,17 @@ $$
 $$
 \begin{align*}
 \text{Assume-se que} \quad
-&(f \circ g) \circ h = f \circ (g \circ h)                                                     \\
+&(f \cdot g) \cdot h = f \cdot (g \cdot h)                                                     \\
 &\equiv                                                            \tag{Igualdade extensional} \\
-&\forall x, \; ((f \circ g) \circ h) \; x = (f \circ (g \circ h)) \; x                         \\
+&\forall x, \; ((f \cdot g) \cdot h) \; x = (f \cdot (g \cdot h)) \; x                         \\
 &\equiv                                                            \tag{F1}                    \\
-&(f \circ g) \circ (h \; x) = f \; ((g \circ h) \; x)                                          \\
+&(f \cdot g) \cdot (h \; x) = f \; ((g \cdot h) \; x)                                          \\
 &\equiv                                                            \tag{F1}                    \\
 &f \; (g \; (h \; x)) = f \; (g \; (h \; x))                                                   \\
 &\equiv                                                                                        \\
 &\text{True}                                                                                   \\
 \text{Logo }
-&(f \circ g) \circ h = f \circ (g \circ h)
+&(f \cdot g) \cdot h = f \cdot (g \cdot h)
 \end{align*}
 $$
 
@@ -317,29 +317,29 @@ $$
 
 > A função $\text{id} :: a \to a$ é tal que $\text{id} \; x = x$.
 >
-> Mostre que $f \circ \text{id} = \text{id} \circ f = f$ qualquer que seja $f$.
+> Mostre que $f \cdot \text{id} = \text{id} \cdot f = f$ qualquer que seja $f$.
 
 ### Resolução 6
 
 $$
 \begin{align*}
-(f \circ \text{id}) \; x &= f \; (\text{id} \; x)    \tag{F1}                    \\
+(f \cdot \text{id}) \; x &= f \; (\text{id} \; x)    \tag{F1}                    \\
                          &= f \; x                   \tag{Def. \(\text{id}\)}    \\
                          &= \text{id} \; (f \; x)    \tag{Def. \(\text{id}\)}    \\
-                         &= (\text{id} \circ f) \; x \tag{F1}
+                         &= (\text{id} \cdot f) \; x \tag{F1}
 \end{align*}
 $$
 
 $$
 \begin{align*}
 \text{Como }
-&\forall x \in \text{Dom}(f), \; (f \circ \text{id}) \; x = (\text{id} \circ f) \; x \\
+&\forall x \in \text{Dom}(f), \; (f \cdot \text{id}) \; x = (\text{id} \cdot f) \; x \\
 \text{implica, por ig. extensional, que }
-&f \circ \text{id} = \text{id} \circ f \\
+&f \cdot \text{id} = \text{id} \cdot f \\
 \text{e pela definição de id temos que }
-&f \circ \text{id} = f \\
+&f \cdot \text{id} = f \\
 \text{então }
-&f \circ \text{id}        = \text{id} \circ f = f
+&f \cdot \text{id}        = \text{id} \cdot f = f
 \end{align*}
 $$
 
@@ -347,18 +347,18 @@ $$
 
 $$
 \begin{align*}
-(f \circ \text{id}) \; x &= f \; (\text{id} \; x) \tag{F1}                    \\
+(f \cdot \text{id}) \; x &= f \; (\text{id} \; x) \tag{F1}                    \\
                          &= f \; x                \tag{Def. \(\text{id}\)}    \\
                          &\equiv                  \tag{Igualdade extensional} \\
-f \circ \text{id}        &= f                                                 \\
+f \cdot \text{id}        &= f                                                 \\
 \\
-(\text{id} \circ f) \; x &= \text{id} \; (f \; x) \tag{F1}                    \\
+(\text{id} \cdot f) \; x &= \text{id} \; (f \; x) \tag{F1}                    \\
                          &= f \; x                \tag{Def. \(\text{id}\)}    \\
                          &\equiv                  \tag{Igualdade extensional} \\
-\text{id} \circ f        &= f                                                 \\
+\text{id} \cdot f        &= f                                                 \\
 \\
 \text{Logo }
-f \circ \text{id}        &= \text{id} \circ f = f
+f \cdot \text{id}        &= \text{id} \cdot f = f
 \end{align*}
 $$
 

@@ -12,7 +12,7 @@
 > \left\{
 > \begin{aligned}
 > &f : (\mathbb{B} \times \mathbb{B}) \times \mathbb{B} \to \mathbb{B} \\
-> &f = xor \circ (and \times id)
+> &f = xor \cdot (and \times id)
 > \end{aligned}
 > \right.
 > \tag{F1}
@@ -36,9 +36,9 @@ f \; ((a, b), c) &= (a \land b) \oplus c                                        
                  &= xor \; (and \; (a, b), c)                \tag{Def. and}     \\
                  &= xor \; (and \; (a, b), id \; c)          \tag{74: Def-id}   \\
                  &= xor \; ((and \times id) \; ((a, b), c))  \tag{78: Def-×}    \\
-                 &= xor \circ (and \times id) \; ((a, b), c) \tag{73: Def-comp} \\
+                 &= xor \cdot (and \times id) \; ((a, b), c) \tag{73: Def-comp} \\
                  &\equiv                                     \tag{72: Ig. Ext.} \\
-               f &= xor \circ (and \times id)
+               f &= xor \cdot (and \times id)
 \end{align*}
 $$
 
@@ -160,8 +160,8 @@ dita **universal**:
 > \quad \equiv \quad
 > \left\{
 > \begin{aligned}
-> \pi_1 \circ k = f \\
-> \pi_2 \circ k = g
+> \pi_1 \cdot k = f \\
+> \pi_2 \cdot k = g
 > \end{aligned}
 > \right.
 > \tag{F2}
@@ -177,8 +177,8 @@ k = \langle f, g \rangle
 \quad \Leftrightarrow \quad
 \left\{
 \begin{aligned}
-\pi_1 \circ k = f \\
-\pi_2 \circ k = g
+\pi_1 \cdot k = f \\
+\pi_2 \cdot k = g
 \end{aligned}
 \right.
 \tag{6: Universal-×}
@@ -192,8 +192,8 @@ $$
 \quad \text{então} \quad &id = \langle f, g \rangle \Leftrightarrow
 \left\{
 \begin{aligned}
-\pi_1 \circ id = f \\
-\pi_2 \circ id = g
+\pi_1 \cdot id = f \\
+\pi_2 \cdot id = g
 \end{aligned}
 \right.
 \\
@@ -222,7 +222,7 @@ $$
 > Derive a partir de (F2) a lei
 >
 > $$
-> \langle h, \; k \rangle \circ f = \langle h \circ f, \; k \circ f \rangle
+> \langle h, \; k \rangle \cdot f = \langle h \cdot f, \; k \cdot f \rangle
 > $$
 >
 > que também consta desse [formulário](https://haslab.github.io/CP/Material/cpCalFun.pdf)
@@ -232,19 +232,19 @@ sob a designação $\text{fusão-}\times$.
 
 $$
 \begin{align*}
-&\langle h, \; k \rangle \circ f = \langle h \circ f, \; k \circ f \rangle \\
+&\langle h, \; k \rangle \cdot f = \langle h \cdot f, \; k \cdot f \rangle \\
 &\equiv \tag{6: Universal-×, 2: Assoc-comp} \\
 &\left\{
 \begin{aligned}
-(\pi_1 \circ \langle h, \; k \rangle) \circ f &= h \circ f \\
-(\pi_2 \circ \langle h, \; k \rangle) \circ f &= k \circ f
+(\pi_1 \cdot \langle h, \; k \rangle) \cdot f &= h \cdot f \\
+(\pi_2 \cdot \langle h, \; k \rangle) \cdot f &= k \cdot f
 \end{aligned}
 \right. \\
 &\equiv \tag{7: Cancelamento-×} \\
 &\left\{
 \begin{aligned}
-h \circ f &= h \circ f \\
-k \circ f &= k \circ f
+h \cdot f &= h \cdot f \\
+k \cdot f &= k \cdot f
 \end{aligned}
 \right. \quad \text{c.q.m.}
 \end{align*}
@@ -268,7 +268,7 @@ a seguinte propriedade da duplicação de
 informação:
 >
 > $$
-> dup \circ f = \langle f, f \rangle
+> dup \cdot f = \langle f, f \rangle
 > $$
 
 ### Resolução 6
@@ -283,11 +283,11 @@ $$
 &\equiv \tag{72: Ig. Ext.}              \\
 &dup = \langle id, id \rangle           \\
 \\
-\text{Então} \quad &dup \circ f = \langle id, id \rangle \circ f \\
+\text{Então} \quad &dup \cdot f = \langle id, id \rangle \cdot f \\
 &\equiv \tag{9: Fusão-×} \\
-&dup \circ f = \langle id \circ f, id \circ f \rangle \\
+&dup \cdot f = \langle id \cdot f, id \cdot f \rangle \\
 &\equiv \tag{1: Natural-id} \\
-&dup \circ f = \langle f, f \rangle \quad \text{c.q.m.}
+&dup \cdot f = \langle f, f \rangle \quad \text{c.q.m.}
 \end{align*}
 $$
 
@@ -298,13 +298,13 @@ $$
 > Considere a função:
 >
 > $$
-> \text{xr} = \langle \pi_1 \times id, \; \pi_2 \circ \pi_1 \rangle
+> \text{xr} = \langle \pi_1 \times id, \; \pi_2 \cdot \pi_1 \rangle
 > $$
 >
 > Mostre que $\text{xr}$ satisfaz a propriedade
 >
 > $$
-> \text{xr} \circ \langle \langle f, g \rangle, h \rangle = \langle \langle f, h \rangle, g \rangle
+> \text{xr} \cdot \langle \langle f, g \rangle, h \rangle = \langle \langle f, h \rangle, g \rangle
 > $$
 >
 > para todo $f$, $g$ e $h$.
@@ -313,11 +313,11 @@ $$
 
 $$
 \begin{align*}
-&\langle \pi_1 \times id, \; \pi_2 \circ \pi_1 \rangle \circ \langle \langle f, g \rangle, h \rangle \\
+&\langle \pi_1 \times id, \; \pi_2 \cdot \pi_1 \rangle \cdot \langle \langle f, g \rangle, h \rangle \\
 &= \tag{9: Fusão-×} \\
-&\langle (\pi_1 \times id) \circ \langle \langle f, g \rangle, h \rangle, \; (\pi_2 \circ \pi_1) \circ \langle \langle f, g \rangle, h \rangle \rangle \\
+&\langle (\pi_1 \times id) \cdot \langle \langle f, g \rangle, h \rangle, \; (\pi_2 \cdot \pi_1) \cdot \langle \langle f, g \rangle, h \rangle \rangle \\
 &= \tag{11: Absorção-×, 2: Assoc-comp} \\
-&\langle \langle \pi_1 \circ \langle f, g \rangle, \; id \circ h \rangle, \; \pi_2 \circ (\pi_1 \circ \langle \langle f, g \rangle, h \rangle ) \rangle \\
+&\langle \langle \pi_1 \cdot \langle f, g \rangle, \; id \cdot h \rangle, \; \pi_2 \cdot (\pi_1 \cdot \langle \langle f, g \rangle, h \rangle ) \rangle \\
 &= \tag{7: Cancelamento-×, 1: Natural-id} \\
 &\langle \langle f, \; h \rangle, \; g \rangle \quad \text{c.q.m.}
 \end{align*}
@@ -362,15 +362,15 @@ $$
 &\underline{(b, a)} =
 \left\{
 \begin{aligned}
-\pi_1 \circ \underline{(b, a)} = \underline{b} \\
-\pi_2 \circ \underline{(b, a)} = \underline{a}
+\pi_1 \cdot \underline{(b, a)} = \underline{b} \\
+\pi_2 \cdot \underline{(b, a)} = \underline{a}
 \end{aligned}
 \right. \\
 &\equiv \tag{4: Absorção-const} \\
 &\left\{
 \begin{aligned}
-\pi_1 \circ \underline{(b, a)} = \underline{b} \\
-\pi_2 \circ \underline{(b, a)} = \underline{a} \\
+\pi_1 \cdot \underline{(b, a)} = \underline{b} \\
+\pi_2 \cdot \underline{(b, a)} = \underline{a} \\
 \end{aligned}
 \right. \\
 &\equiv \tag {79: Def-proj} \\
@@ -454,7 +454,7 @@ $$
 >>
 >> *subject to the following restrictions: \
 >> • you cannot use argument variables ($x$, $y$, ...) \
->> • you can use function composition $f \circ g$ and the parallel combinator $\langle f, g\rangle$ as well as
+>> • you can use function composition $f \cdot g$ and the parallel combinator $\langle f, g\rangle$ as well as
 any function available from module $Cp.hs$ \
 >> • you can resort to Haskell standard functions such as e.g. `map`, `filter` and so on.*
 
