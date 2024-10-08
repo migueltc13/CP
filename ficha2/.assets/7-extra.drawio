@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" version="24.7.17">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.7.17">
   <diagram name="Page-1" id="8x4MicqjeGiNOcLGt8TJ">
-    <mxGraphModel dx="766" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel dx="539" dy="346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -46,7 +46,7 @@
             <mxPoint x="520" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="&lt;div&gt;$$\pi_2 \circ \pi_1$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-14">
+        <UserObject label="&lt;div&gt;$$\pi_2 \cdot \pi_1$$&lt;/div&gt;" placeholders="1" name="Variable" id="F1cqkfS3BarPNqulVMXe-14">
           <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
             <mxGeometry x="465" y="170" width="50" height="40" as="geometry" />
           </mxCell>

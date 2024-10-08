@@ -4,7 +4,9 @@
 
 > O circuito booleano
 >
-> [...]
+> <div align="center">
+>   <img src=".assets/e-1.jpg" width="50%" alt="Circuito booleano">
+> </div>
 >
 > pode descrever-se pela função $f$ que se segue,
 >
@@ -257,11 +259,9 @@ $$
 > Uma das operações essenciais em processamento
 da informação é a sua *duplicação*:
 >
-> [...]
->
-> $$
-> dup \; x = (x, x)
-> $$
+> <div align="center">
+>   <img src=".assets/e-2.jpg" width="50%" alt="dup">
+> </div>
 >
 > Recorra à lei de $\text{fusão-}\times$ para demonstrar
 a seguinte propriedade da duplicação de
@@ -427,7 +427,7 @@ $$
 $$
 
 <div align="center">
-  <img src=".assets/9.png" alt="Diagrama do tipo da função α">
+  <img src=".assets/9.png" width="37.5%" alt="Diagrama do tipo da função α">
 </div>
 
 <div style="page-break-after: always;"></div>

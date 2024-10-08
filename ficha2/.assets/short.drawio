@@ -4,60 +4,60 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-1" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YmtkSNz6RdnZejPs2xfk-2" target="YmtkSNz6RdnZejPs2xfk-4">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-1" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YmtkSNz6RdnZejPs2xfk-2" target="YmtkSNz6RdnZejPs2xfk-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="200" as="sourcePoint" />
             <mxPoint x="420" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-2" value="String" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-2" value="String" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="500" y="190" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-4" value="[String]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-4" value="[String]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="380" y="180" width="40" height="40" as="geometry" />
         </mxCell>
         <UserObject label="words" placeholders="1" name="Variable" id="YmtkSNz6RdnZejPs2xfk-5">
-          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" vertex="1" parent="1">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
             <mxGeometry x="430" y="170" width="70" height="40" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="short = uncurry (++) . split head ((&quot; &quot; ++) . last) . words&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" placeholders="1" name="Variable" id="YmtkSNz6RdnZejPs2xfk-10">
-          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" vertex="1" parent="1">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
             <mxGeometry x="230" y="290" width="290" height="20" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-12" value="String &lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;katex-html&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;mbin&quot;&gt;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;[Char]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-12" value="String &lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;katex-html&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;mbin&quot;&gt;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;[Char]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="150" y="190" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-13" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="YmtkSNz6RdnZejPs2xfk-12" source="YmtkSNz6RdnZejPs2xfk-4">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-13" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YmtkSNz6RdnZejPs2xfk-4" target="YmtkSNz6RdnZejPs2xfk-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="375" y="100" as="sourcePoint" />
             <mxPoint x="375" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="&lt;div&gt;$$\langle \text{head, (&quot; &quot;&amp;nbsp; ++)} \circ \text{last} \rangle$$&lt;/div&gt;" placeholders="1" name="Variable" id="YmtkSNz6RdnZejPs2xfk-15">
-          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" vertex="1" parent="1">
+        <UserObject label="&lt;div&gt;$$\langle \text{head, (&quot; &quot;&amp;nbsp; ++)} \cdot \text{last} \rangle$$&lt;/div&gt;" placeholders="1" name="Variable" id="YmtkSNz6RdnZejPs2xfk-15">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
             <mxGeometry x="240" y="168" width="140" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-16" value="$$\times$$" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-16" value="$$\times$$" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="169" y="180" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-17" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YmtkSNz6RdnZejPs2xfk-12" target="YmtkSNz6RdnZejPs2xfk-20">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-17" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YmtkSNz6RdnZejPs2xfk-12" target="YmtkSNz6RdnZejPs2xfk-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="170" y="240" as="sourcePoint" />
             <mxPoint x="190" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <UserObject label="uncurry (++)" placeholders="1" name="Variable" id="YmtkSNz6RdnZejPs2xfk-18">
-          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" vertex="1" parent="1">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontColor=#e5a50a;" parent="1" vertex="1">
             <mxGeometry x="193" y="220" width="70" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-20" value="[Char]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-20" value="[Char]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="170" y="280" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="YmtkSNz6RdnZejPs2xfk-22" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YmtkSNz6RdnZejPs2xfk-2" target="YmtkSNz6RdnZejPs2xfk-20">
+        <mxCell id="YmtkSNz6RdnZejPs2xfk-22" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#00FF00;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YmtkSNz6RdnZejPs2xfk-2" target="YmtkSNz6RdnZejPs2xfk-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="350" y="340" as="sourcePoint" />
             <mxPoint x="520" y="290" as="targetPoint" />
