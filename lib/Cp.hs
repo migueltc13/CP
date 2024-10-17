@@ -1,5 +1,5 @@
 
-{-# OPTIONS_GHC -XNPlusKPatterns #-}
+{-# LANGUAGE NPlusKPatterns #-}
 
 -- (c) MP-I (1998/9-2006/7) and CP (2005/6-2024/25)
 
@@ -8,7 +8,7 @@ module Cp where
 infix 5  ><
 infix 4  -|-
 
--- (1) Product -----------------------------------------------------------------
+-- (1) Product ----------------------------------------------------------------
 
 split :: (a -> b) -> (a -> c) -> a -> (b,c)
 split f g x = (f x, g x)
@@ -23,19 +23,19 @@ f >< g = split (f . p1) (g . p2)
 
 -- Renamings:
 
-p1        = fst
-p2        = snd
+p1 = fst
+p2 = snd
 
 -- diagonal (dup)
 
 diag = split id id
 
--- (2) Coproduct ---------------------------------------------------------------
+-- (2) Coproduct --------------------------------------------------------------
 
 -- Renamings:
 
-i1      = Left
-i2      = Right
+i1 = Left
+i2 = Right
 
 -- either is predefined
 
@@ -44,7 +44,7 @@ f -|- g = either (i1 . f) (i2 . g)
 
 -- McCarthy's conditional:
 
-cond p f g = (either f g) . (grd p)
+cond p f g = either f g . grd p
 
 -- codiagonal (join)
 
@@ -61,7 +61,7 @@ expn :: (b -> c) -> (a -> b) -> a -> c
 expn f = curry (f . ap)
 
 p2p :: (a, a) -> Bool -> a
-p2p p b = if b then (snd p) else (fst p) -- pair to predicate
+p2p p b = if b then snd p else fst p -- pair to predicate
 
 -- exponentiation functor is (a->) predefined
 
@@ -70,7 +70,7 @@ p2p p b = if b then (snd p) else (fst p) -- pair to predicate
 -- (3.1) Flipping -------------------------------------------------------------
 
 (|>) = flip ($)
-(º) = flip (.)
+º = flip (.)
 
 -- (4) Others -----------------------------------------------------------------
 
@@ -120,7 +120,7 @@ coassocl :: Either b (Either a c) -> Either (Either b a) c
 coassocl = either (i1.i1) (i2 -|- id)
 
 distl :: (Either c a, b) -> Either (c, b) (a, b)
-distl = uncurry (either (curry i1)(curry i2))
+distl = uncurry (either (curry i1) (curry i2))
 
 distr :: (b, Either c a) -> Either (b, c) (b, a)
 distr = (swap -|- swap) . distl . swap
@@ -131,7 +131,7 @@ colambda (a,b) = f where f True = a; f False = b
 lambda :: (Bool -> a) -> (a, a)
 lambda f = (f False, f True)
 
--- (6) Class bifunctor ---------------------------------------------------------
+-- (6) Class bifunctor --------------------------------------------------------
 
 class BiFunctor f where
       bmap :: (a -> b) -> (c -> d) -> (f a c -> f b d)
@@ -142,29 +142,30 @@ instance BiFunctor Either where
 instance BiFunctor (,) where
     bmap f g  = f >< g
 
--- (7) Monads: -----------------------------------------------------------------
+-- (7) Monads: ----------------------------------------------------------------
 
--- (7.1) Kleisli monadic composition -------------------------------------------
+-- (7.1) Kleisli monadic composition ------------------------------------------
 
 infix 4  .!
 
 (.!) :: Monad a => (b -> a c) -> (d -> a b) -> d -> a c
-(f .! g) a = (g a) >>= f
+(f .! g) a = g a >>= f
 
 mult :: (Monad m) => m (m b) -> m b
 mult = (>>= id)  -- also known as join
 
--- (7.2) Monadic binding ---------------------------------------------------------
+-- (7.2) Monadic binding ------------------------------------------------------
 
 ap' :: (Monad m) => (a -> m b, m a) -> m b
-ap' = uncurry (flip (>>=))
+-- ap' = uncurry (flip (>>=))
+ap' = uncurry (=<<)
 
 -- (7.3) Lists
 
 singl :: a -> [a]
 singl = return
 
--- (7.4) Strong monads -----------------------------------------------------------
+-- (7.4) Strong monads --------------------------------------------------------
 
 class (Functor f, Monad f) => Strong f where
       rstr :: (f a,b) -> f(a,b)
@@ -186,7 +187,7 @@ splitm :: Strong ff => ff (a -> b) -> a -> ff b
 splitm = curry (fmap ap . rstr)
 
 {--
--- (7.5) Monad transformers ------------------------------------------------------
+-- (7.5) Monad transformers ---------------------------------------------------
 
 class (Monad m, Monad (t m))  => MT t m where   -- monad transformer class
       lift :: m a -> t m a
@@ -198,7 +199,7 @@ dlift = lift . lift
 
 --}
 
--- (8) Basic functions, abbreviations ------------------------------------------
+-- (8) Basic functions, abbreviations -----------------------------------------
 
 bang = (!)
 
@@ -229,21 +230,21 @@ false = const False
 
 nat0 = [0..] -- the natural numbers
 
--- (9) Maybe -------------------------------------------------------------------
+-- (9) Maybe ------------------------------------------------------------------
 
 inMaybe :: Either () a -> Maybe a
 inMaybe = either (const Nothing) Just
 
-outMaybe Nothing = i1(); outMaybe (Just y) = i2 y
+outMaybe Nothing = i1 (); outMaybe (Just y) = i2 y
 
 tot :: (a -> b) -> (a -> Bool) -> a -> Maybe b
 tot f p = cond p (return . f) nothing
 
--- (10) Advanced ---------------------------------------------------------------
+-- (10) Advanced --------------------------------------------------------------
 
 class (Functor f) => Unzipable f where
       unzp :: f(a,b) -> (f a,f b)
-      unzp = split (fmap p1)(fmap p2)
+      unzp = split (fmap p1) (fmap p2)
 
 class Functor g => DistL g where
       lamb :: Monad m => g (m a) -> m (g a)
@@ -257,16 +258,18 @@ instance DistL Maybe where
 aap :: Monad m  => m (a->b) -> m a -> m b
 -- to convert Monad into Applicative
 -- (<*>) = curry(lift ap) where lift h (x,y) = do { a <- x; b <- y; return ((curry h a b)) }
-aap mf mx = do { f <- mf ; x <- mx ; return (f x) }
+-- aap mf mx = do { f <- mf ; x <- mx ; return (f x) }
+aap mf mx = do { f <- mf ; f <$> mx ; }
 
 -- gather: n-ary split
 
 gather :: [a -> b] -> a -> [b]
-gather l x = map (flip ($) x) l
+-- gather l x = map (flip ($) x) l
+gather l x = map ($ x) l
 
 -- the dual of zip
 
 cozip :: (Functor f) => Either (f a) (f b) -> f (Either a b)
-cozip = either (fmap Left)(fmap Right)
+cozip = either (fmap Left) (fmap Right)
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
