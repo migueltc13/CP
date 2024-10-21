@@ -95,7 +95,7 @@ $$
 &\equiv \tag{77: Def-split} \\
 &assocr \; ((a,b),c) = (\pi_1 \cdot \pi_1 \; ((a,b),c), \pi_2 \times id \; ((a,b),c)) \\
 &\equiv \tag{78: Def-×, 74: Def-id} \\
-&assocr \; ((a,b),c) = (\pi_1 \cdot \pi_1 \; ((a,b),c), (\pi_2 \cdot (a,b), c)) \\
+&assocr \; ((a,b),c) = (\pi_1 \cdot \pi_1 \; ((a,b),c), (\pi_2 \; (a,b), c)) \\
 &\equiv \tag{79: Def-proj, 73: Def-comp} \\
 &assocr \; ((a,b),c) = (a,(b,c)) \\
 \end{align*}
