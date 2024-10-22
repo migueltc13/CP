@@ -219,7 +219,7 @@ $$
 \begin{align*}
 &\text{Para a composição ser possível, } B = A \text{, logo:} \\
 &dup : A \to A \times A \\
-&join \cdot dup : A + A \to A \times A \\
+&dup \cdot join : A + A \to A \times A \\
 \end{align*}
 \\[1em]
 \text{Propriedade grátis de } \alpha = dup \cdot join
