@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -XNPlusKPatterns #-}
+{-# LANGUAGE NPlusKPatterns #-}
 
 -- (c) MP-I (1998/9-2006/7) and CP (2005/6-2024/25)
 
@@ -8,7 +8,7 @@ import Cp
 
 -- (1) Datatype definition -----------------------------------------------------
 
--- "data Nat = 0 | succ Nat"   -- in fact: Haskell Integer is used as carrier type
+-- "data Nat = 0 | succ Nat"  -- in fact: Haskell Integer is used as carrier type
 
 inNat = either (const 0) succ
 
@@ -19,11 +19,11 @@ outNat (n+1) = i2 n
 
 -- (2) Ana + cata + hylo -------------------------------------------------------
 
-recNat f    = id -|- f                                 -- this is F f for this datatype
+recNat f    = id -|- f  -- this is F f for this datatype
 
 cataNat g   = g . recNat (cataNat g) . outNat
 
-anaNat h    = inNat . (recNat (anaNat h) ) . h
+anaNat h    = inNat . recNat (anaNat h) . h
 
 hyloNat g h = cataNat g . anaNat h
 
@@ -37,11 +37,11 @@ hyloNat g h = cataNat g . anaNat h
 
 for b i = cataNat (either (const i) b)
 
-somar a = cataNat (either (const a) succ)        -- for succ a
+somar a = cataNat (either (const a) succ)   -- for succ a
 
-multip a = cataNat (either (const 0) (a+))       -- for (a+) 0
+multip a = cataNat (either (const 0) (a+))  -- for (a+) 0
 
-exp a = cataNat (either (const 1) (a*))          -- for (a*) 1
+exp a = cataNat (either (const 1) (a*))     -- for (a*) 1
 
 -- (4.2) sq (square of a natural number) 
 
@@ -53,20 +53,20 @@ sq (n+1) = oddn n + sq n where oddn n = 2*n+1
 sq' = p1 . aux
        -- this is the outcome of calculating sq as a for loop using the
        -- mutual recursion law
-      where aux = cataNat (either (split (const 0)(const 1)) (split (uncurry (+))((2+).p2)))
+      where aux = cataNat (either (split (const 0) (const 1)) (split (uncurry (+)) ((2+).p2)))
 
-sq'' n  = -- the same as a for loop (putting variables in)
+sq'' n =  -- the same as a for loop (putting variables in)
        p1 (for body (0,1) n)
        where body(s,o) = (s+o,2+o)
 
 -- (4.3) factorial
 
 fac = p2. facfor
-facfor = for (split (succ.p1) mul) (1,1) 
+facfor = for (split (succ.p1) mul) (1,1)
 
 -- factorial = paraNat (either (const 1) g) where g(n,r) = (n+1) * r
 
--- (4.4) integer division as an anamorphism --------------
+-- (4.4) integer division as an anamorphism ------------------------------------
 
 idiv :: Integer -> Integer -> Integer
 {-- pointwise
@@ -76,11 +76,11 @@ x `idiv` y  |   x <  y    = 0
 
 idiv = flip aux
 
-aux y = anaNat divide where 
+aux y = anaNat divide where
            divide x | x <  y  = i1 ()
                     | x >= y  = i2 (x - y)
 
---- (4.5) bubble sort -----------------------------------
+--- (4.5) bubble sort ----------------------------------------------------------
 
 bSort xs = for bubble xs (length xs) where
    bubble (x:y:xs)
@@ -88,20 +88,19 @@ bSort xs = for bubble xs (length xs) where
        | otherwise = x : bubble (y:xs)
    bubble x = x
 
---- (5) While loop -------------------------------------
+--- (5) While loop -------------------------------------------------------------
 
-{-- pointwise 
-
+{-- pointwise
 while p f x | not (p x) = x
-              | otherwise = while p f (f x)
+            | otherwise = while p f (f x)
 --}
 
 while :: (a -> Bool) -> (a -> a) -> a -> a
-while p f = w where w =  (either id id) . (w -|- id) . (f -|- id) . (grd p)
+while p f = w where w =  either id id . (w -|- id) . (f -|- id) . grd p
 
---- (5) Monadic for -------------------------------------
+--- (5) Monadic for ------------------------------------------------------------
 
 mfor b i 0 = i
 mfor b i (n+1) = do {x <- mfor b i n ; b x}
 
---- end of Nat.hs ----------------------------------------
+--- end of Nat.hs --------------------------------------------------------------
