@@ -6,7 +6,8 @@
 - [Ficha 2](ficha2/ficha2.pdf)
 - [Ficha 3](ficha3/ficha3.pdf)
 - [Ficha 4](ficha4/ficha4.pdf)
-- [Ficha 5](ficha4/ficha5.pdf)
+- [Ficha 5](ficha5/ficha5.pdf)
+- [Ficha 6](ficha6/ficha6.pdf)
 
 ## Testes
 
