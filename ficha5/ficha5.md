@@ -212,7 +212,61 @@ $$
 
 ### Resolução 6
 
-**TODO**
+$$
+\begin{align*}
+&\overline{f \cdot (g \times h)} = \overline{\text{ap} \cdot (\text{id} \times h)} \cdot \overline{f} \cdot g \\
+&\equiv \tag{\small{35: Universal-exp}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((\overline{\text{ap} \cdot (id \times h)} \cdot \overline{f} \cdot g) \times id) \\
+&\equiv \tag{\small{38: Fusão-exp, 1: Natural-id}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((\overline{\text{ap} \cdot (id \times h)} \cdot \overline{f \cdot (g \times id)}) \times (id \cdot id)) \\
+&\equiv \tag{\small{2: Assoc-comp, 14: Functor-×}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((\overline{\text{ap} \cdot (id \times h)} \times id) \cdot (\overline{f \cdot (g \times id)} \times id)) \\
+&\equiv \tag{\small{36: Cancelamento-exp}} \\
+&f \cdot (g \times h) = (\text{ap} \cdot (id \times h)) \cdot (\overline{f \cdot (g \times id)} \times id) \\
+&\equiv \tag{\small{2: Assoc-comp, 14: Functor-×}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((id \cdot \overline{f \cdot (g \times id)}) \times (h \cdot id)) \\
+&\equiv \tag{\small{1: Natural-id (2×), 38: Fusão-exp}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((\overline{f} \cdot g) \times (id \cdot h)) \\
+&\equiv \tag{\small{14: Functor-×}} \\
+&f \cdot (g \times h) = \text{ap} \cdot ((\overline{f} \times id) \cdot (g \times h)) \\
+&\equiv \tag{\small{2: Assoc-comp, 36: Cancelamento-exp}} \\
+&f \cdot (g \times h) = f \cdot (g \times h) \qquad \text{c.q.d.}
+\end{align*}
+$$
+
+<div style="page-break-after: always;"></div>
+
+### Resolução 6 (Alternativa)
+
+$$
+\begin{align*}
+&\overline{f \cdot (g \times h)} \\
+&= \tag{\small{F9}} \\
+&\overline{\text{ap} \cdot (\text{id} \times h)} \cdot \overline{f} \cdot g \\
+&= \tag{\small{38: Fusão-exp}} \\
+&\overline{\text{ap} \cdot (\text{id} \times h) \cdot (\overline{f} \times id)} \cdot g \\
+&= \tag{\small{2: Assoc-comp, 14: Functor-×}} \\
+&\overline{\text{ap} \cdot ((\text{id} \cdot \overline{f}) \times (h \cdot id))} \cdot g \\
+&= \tag{\small{1: Natural-id}} \\
+&\overline{\text{ap} \cdot (\overline{f} \times h)} \cdot g \\
+&= \tag{\small{38: Fusão-exp}} \\
+&\overline{\text{ap} \cdot (\overline{f} \times h) \cdot (g \times id)} \\
+&= \tag{\small{14: Functor-×, 1: Natural-id}} \\
+&\overline{\text{ap} \cdot ((\overline{f} \cdot g) \times h)} \\
+&= \tag{\small{38: Fusão-exp}} \\
+&\overline{\text{ap} \cdot (\overline{f \cdot (g \times id)} \times h)} \\
+&= \tag{\small{1: Natural-id (2×)}} \\
+&\overline{\text{ap} \cdot ((\overline{f \cdot (g \times id)} \cdot id) \times (id \cdot h))} \\
+&= \tag{\small{14: Functor-×}} \\
+&\overline{\text{ap} \cdot ((\overline{f \cdot (g \times id)} \times id) \cdot (id \times h))} \\
+&= \tag{\small{2: Assoc-comp, 36: Cancelamento-exp}} \\
+&\overline{f \cdot (g \times id) \cdot (id \times h)} \\
+&= \tag{\small{2: Assoc-comp, 14: Functor-×}} \\
+&\overline{f \cdot ((g \cdot id) \times (id \cdot h))} \\
+&= \tag{\small{1: Natural-id}} \\
+&\overline{f \cdot (g \times h)} \\
+\end{align*}
+$$
 
 <div style="page-break-after: always;"></div>
 
