@@ -139,7 +139,7 @@ $$
 &= \tag{\small{30: Cond. McCharty (3×)}} \\
 &[[a, b] \cdot p?, [c, d] \cdot p?] \cdot p? \\
 &= \tag{\small{22: Absorção-+}} \\
-&[[a, b], [c, d]] \cdot (p? \cdot p?) \cdot p? \\
+&[[a, b], [c, d]] \cdot (p? + p?) \cdot p? \\
 &= \tag{\small{F4}} \\
 &[[a, b], [c, d]] \cdot (i_1 + i_2) \cdot p? \\
 &= \tag{\small{22: Absorção-+, 18: Cancelamento-+}} \\
