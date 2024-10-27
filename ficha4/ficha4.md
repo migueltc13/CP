@@ -70,10 +70,28 @@ $$
 &\text{coassocl} = [i_1 \cdot i_1, [i_1 \cdot i_2, i_2]] \\
 &\equiv \tag{21: Def-+, 1: Natural-id} \\
 &\text{coassocl} = [i_1 \cdot i_1, i_2 + id] \\
+\\[1em]
 \end{align*}
 $$
 
-**TODO** Haskell definition without using `either`
+$$
+\begin{align*}
+&\left\{
+\begin{aligned}
+&\text{coassocl} \cdot i_1 = i_1 \cdot i_1 \\
+&\text{coassocl} \cdot i_2 \cdot i_1 = i_1 \cdot i_2 \\
+&\text{coassocl} \cdot i_2 \cdot i_2 = i_2
+\end{aligned}
+\right. \\
+\end{align*}
+$$
+
+```haskell
+coassocl :: Either a (Either b c) -> Either (Either a b) c
+coassocl (Left x) = Left (Left x)
+coassocl (Right (Left x)) = Left (Right x)
+coassocl (Right (Right x)) = Right x
+```
 
 <div style="page-break-after: always;"></div>
 
