@@ -51,4 +51,3 @@ mkInd = groupPagByAut              -- group pages by author
         . joinAutPag               -- join authors and pages
         . (sortByKey >< sortByKey) -- alternatively sort lists by key
         . (deconsBib >< deconsAux) -- alternatively deconstruct authors and pages
-
