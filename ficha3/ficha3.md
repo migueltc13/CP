@@ -454,15 +454,15 @@ fac = [\underline{1}, \text{mul}] \cdot (id + \langle \text{succ}, fac \rangle) 
 $$
 
 ```haskell
-mul :: Num a => (a, a) -> a
+{-# LANGUAGE NPlusKPatterns #-}
+
+import Cp (split, i1, i2, (-|-))
+
 mul (x, y) = x * y
 
-out :: (Eq b, Num b) => b -> Either () b
-out x = case x of
-    0 -> i1 ()
-    n -> i2 (n - 1)
+out 0 = i1 ()
+out (n + 1) = i2 n
 
-fac :: Int -> Int
 fac = either (const 1) mul . (id -|- split succ fac) . out
 ```
 
