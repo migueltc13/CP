@@ -1,11 +1,5 @@
 # CP - Ficha 6
 
-$$
-% left and right banana brackets
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
-$$
-
 ## Exercício 1
 
 > O código que se segue, escrito em Haskell, implementa a noção de ciclo-for,
@@ -25,18 +19,13 @@ onde $b$ é o corpo (“body”) do ciclo e $i$ é a sua inicialização:
 > Mostre que
 >
 > $$
-> \newcommand{\lb}{(\hspace{-.2em}|}
-> \newcommand{\rb}{|\hspace{-.2em})}
-> \text{for} \; b \; i = \lb g \rb
-> \tag{F2}
+> \text{for} \; b \; i = \lb g \rb \tag{F2}
 > $$
 >
 > se verifica, para um dado $g$ (descubra qual).
 > Sugestão: recorra à lei universal
 >
 > $$
-> \newcommand{\lb}{(\hspace{-.2em}|}
-> \newcommand{\rb}{|\hspace{-.2em})}
 > k = \lb g \rb \Leftrightarrow k \cdot \text{in} = g \cdot (id + k)
 > $$
 >
@@ -62,8 +51,6 @@ onde $b$ é o corpo (“body”) do ciclo e $i$ é a sua inicialização:
 ### Resolução 1
 
 $$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
 \begin{align*}
 &\text{Let } \lb g \rb = \lb [g_1, g_2] \rb \\[1em]
 &\text{for } b \; i = \lb [g_1, g_2] \rb \\
@@ -112,8 +99,6 @@ $$
 ### Resolução 2
 
 $$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
 \text{Pelo exercício anterior, temos:} \\[0.5em]
 aux = \lb [\underline{(1,1)}, \langle \text{succ} \cdot \pi_1, \text{mul} \rangle] \rb \\[1em]
 [\underline{(1,1)}, \langle \text{succ} \cdot \pi_1, \text{mul} \rangle] : 1 + \mathbb{N_0} \times \mathbb{N_0} \to \mathbb{N_0} \times \mathbb{N_0} \\
@@ -157,8 +142,6 @@ $$
 
 
 $$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
 \begin{align*}
 &\left\{
 \begin{aligned}
@@ -198,8 +181,6 @@ $$
 > Recorde a lei de “fusão-cata”:
 >
 > $$
-> \newcommand{\lb}{(\hspace{-.2em}|}
-> \newcommand{\rb}{|\hspace{-.2em})}
 > f \cdot \lb g \rb = \lb h \rb \Leftarrow f \cdot g = h \cdot (id + f)
 > \tag{F6}
 > $$
@@ -208,18 +189,11 @@ $$
 >
 > $$f \cdot (\text{for} \; f \; i) = \text{for} \; f \; (f \; i)$$
 >
-> sabendo que
-$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
-\text{for} \; f \; i = \lb [\underline{i}, f] \rb
-$.
+> sabendo que $\text{for} \; f \; i = \lb [\underline{i}, f] \rb$.
 
 ### Resolução 4
 
 $$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
 \begin{align*}
 &f \cdot (\text{for} \; f \; i) = \text{for} \; f \; (f \; i) \\
 &\equiv \tag{\small{F2}} \\
@@ -251,8 +225,6 @@ $$
 ### Resolução 5
 
 $$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
 \begin{align*}
 &g = \text{for} \; \underline{i} \; i \\
 &\equiv \tag{\small{F2}} \\
@@ -282,22 +254,13 @@ $$
 
 ## Exercício 6
 
-> Considere o catamorfismo
-$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
-rep \; f = \lb [id, (f \cdot)] \rb
-$.
+> Considere o catamorfismo $rep \; f = \lb [id, (f \cdot)] \rb$.
 Comece por fazer um diagrama do catamorfismo e responda:
 >
 > Qual é o tipo de $rep$? O que faz $rep$?
 >
 > Usando o combinador `cataNat g` da biblioteca `Nat.hs` para implementar
-$
-\newcommand{\lb}{(\hspace{-.2em}|}
-\newcommand{\rb}{|\hspace{-.2em})}
-\lb g \rb
-$, avalie no GHCi expressões como, por exemplo `rep (2*) 0 3` e `rep ("a"++) 10 "b"`
+$\lb g \rb$, avalie no GHCi expressões como, por exemplo `rep (2*) 0 3` e `rep ("a"++) 10 "b"`
 e veja se os resultados confirmam as suas respostas acima.
 
 ### Resolução 6
