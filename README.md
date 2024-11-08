@@ -8,6 +8,7 @@
 - [Ficha 4](ficha4/ficha4.pdf)
 - [Ficha 5](ficha5/ficha5.pdf)
 - [Ficha 6](ficha6/ficha6.pdf)
+- [Ficha 7](ficha7/ficha7.pdf)
 
 ## Testes
 
