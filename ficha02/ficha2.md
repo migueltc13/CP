@@ -33,13 +33,13 @@
 
 $$
 \begin{align*}
-f \; ((a, b), c) &= (a \land b) \oplus c                                        \\
-                 &= xor \; ((a \land b), c)                  \tag{Def. xor}     \\
-                 &= xor \; (and \; (a, b), c)                \tag{Def. and}     \\
-                 &= xor \; (and \; (a, b), id \; c)          \tag{74: Def-id}   \\
-                 &= xor \; ((and \times id) \; ((a, b), c))  \tag{78: Def-×}    \\
-                 &= xor \cdot (and \times id) \; ((a, b), c) \tag{73: Def-comp} \\
-                 &\equiv                                     \tag{72: Ig. Ext.} \\
+f \; ((a, b), c) &= (a \land b) \oplus c                                                \\
+                 &= xor \; ((a \land b), c)                  \tag{\small{Def. xor}}     \\
+                 &= xor \; (and \; (a, b), c)                \tag{\small{Def. and}}     \\
+                 &= xor \; (and \; (a, b), id \; c)          \tag{\small{74: Def-id}}   \\
+                 &= xor \; ((and \times id) \; ((a, b), c))  \tag{\small{78: Def-×}}    \\
+                 &= xor \cdot (and \times id) \; ((a, b), c) \tag{\small{73: Def-comp}} \\
+                 &\equiv                                     \tag{\small{72: Ig. Ext.}} \\
                f &= xor \cdot (and \times id)
 \end{align*}
 $$
@@ -183,7 +183,7 @@ k = \langle f, g \rangle
 \pi_2 \cdot k = g
 \end{aligned}
 \right.
-\tag{6: Universal-×}
+\tag{\small{6: Universal-×}}
 $$
 
 <br />
@@ -200,7 +200,7 @@ $$
 \right.
 \\
 &\equiv
-\tag{1: Natural-id}
+\tag{\small{1: Natural-id}}
 \\
 &id = \langle f, g \rangle \Leftrightarrow
 \left\{
@@ -213,7 +213,7 @@ $$
 \text{Substituindo temos:} \quad &id = \langle \pi_1, \pi_2 \rangle \\
 &\equiv \\
 &\langle \pi_1, \pi_2 \rangle = id_{\scriptstyle A \times B}
-\tag{8: Reflexão-×}
+\tag{\small{8: Reflexão-×}}
 \end{align*}
 $$
 
@@ -235,14 +235,14 @@ sob a designação $\text{fusão-}\times$.
 $$
 \begin{align*}
 &\langle h, \; k \rangle \cdot f = \langle h \cdot f, \; k \cdot f \rangle \\
-&\equiv \tag{6: Universal-×, 2: Assoc-comp} \\
+&\equiv \tag{\small{6: Universal-×, 2: Assoc-comp}} \\
 &\left\{
 \begin{aligned}
 (\pi_1 \cdot \langle h, \; k \rangle) \cdot f &= h \cdot f \\
 (\pi_2 \cdot \langle h, \; k \rangle) \cdot f &= k \cdot f
 \end{aligned}
 \right. \\
-&\equiv \tag{7: Cancelamento-×} \\
+&\equiv \tag{\small{7: Cancelamento-×}} \\
 &\left\{
 \begin{aligned}
 h \cdot f &= h \cdot f \\
@@ -276,17 +276,17 @@ informação:
 $$
 \begin{align*}
 &dup \; x = (x, x)                      \\
-&\equiv \tag{74: Def-id}                \\
+&\equiv \tag{\small{74: Def-id}}        \\
 &dup \; x = (id \; x, id \; x)          \\
-&\equiv \tag{77: Def-split}             \\
+&\equiv \tag{\small{77: Def-split}}     \\
 &dup \; x = \langle id, id \rangle \; x \\
-&\equiv \tag{72: Ig. Ext.}              \\
+&\equiv \tag{\small{72: Ig. Ext.}}      \\
 &dup = \langle id, id \rangle           \\
 \\
 \text{Então} \quad &dup \cdot f = \langle id, id \rangle \cdot f \\
-&\equiv \tag{9: Fusão-×} \\
+&\equiv \tag{\small{9: Fusão-×}} \\
 &dup \cdot f = \langle id \cdot f, id \cdot f \rangle \\
-&\equiv \tag{1: Natural-id} \\
+&\equiv \tag{\small{1: Natural-id}} \\
 &dup \cdot f = \langle f, f \rangle \quad \text{c.q.m.}
 \end{align*}
 $$
@@ -314,11 +314,11 @@ $$
 $$
 \begin{align*}
 &\langle \pi_1 \times id, \; \pi_2 \cdot \pi_1 \rangle \cdot \langle \langle f, g \rangle, h \rangle \\
-&= \tag{9: Fusão-×} \\
+&= \tag{\small{9: Fusão-×}} \\
 &\langle (\pi_1 \times id) \cdot \langle \langle f, g \rangle, h \rangle, \; (\pi_2 \cdot \pi_1) \cdot \langle \langle f, g \rangle, h \rangle \rangle \\
-&= \tag{11: Absorção-×, 2: Assoc-comp} \\
+&= \tag{\small{11: Absorção-×, 2: Assoc-comp}} \\
 &\langle \langle \pi_1 \cdot \langle f, g \rangle, \; id \cdot h \rangle, \; \pi_2 \cdot (\pi_1 \cdot \langle \langle f, g \rangle, h \rangle ) \rangle \\
-&= \tag{7: Cancelamento-×, 1: Natural-id} \\
+&= \tag{\small{7: Cancelamento-×, 1: Natural-id}} \\
 &\langle \langle f, \; h \rangle, \; g \rangle \quad \text{c.q.m.}
 \end{align*}
 $$
@@ -358,7 +358,7 @@ constam do formulário.
 $$
 \begin{align*}
 &\underline{(b, a)} = \langle \underline{b}, \underline{a} \rangle \\
-&\equiv \tag{6: Universal-×} \\
+&\equiv \tag{\small{6: Universal-×}} \\
 &\underline{(b, a)} =
 \left\{
 \begin{aligned}
@@ -366,14 +366,14 @@ $$
 \pi_2 \cdot \underline{(b, a)} = \underline{a}
 \end{aligned}
 \right. \\
-&\equiv \tag{4: Absorção-const} \\
+&\equiv \tag{\small{4: Absorção-const}} \\
 &\left\{
 \begin{aligned}
 \pi_1 \cdot \underline{(b, a)} = \underline{b} \\
 \pi_2 \cdot \underline{(b, a)} = \underline{a} \\
 \end{aligned}
 \right. \\
-&\equiv \tag {79: Def-proj} \\
+&\equiv \tag{\small{79: Def-proj}} \\
 &\left\{
 \begin{aligned}
 &\underline{b} = \underline{b} \\
@@ -434,29 +434,29 @@ $$
 
 ## Exercício 10
 
-> **Questão Prática**: - [...] Dão-se a seguir os requisitos do problema.
+> **Questão Prática**
 >
->> ***Problem requirements**: Given a name, for instance `"Jose Nuno Oliveira"` we
->> wish to obtain its acronym and its short version, as suggested below:*
->> ```
->> *Cp> acronym "Jose Nuno Oliveira"
->> "JNO"
->> *Cp> short "Jose Nuno Oliveira"
->> "Jose Oliveira"
->> *Cp>
->> ```
->>
->> *Define*
->> ```
->> acronym = ...
->> short = ...
->> ```
->>
->> *subject to the following restrictions: \
->> • you cannot use argument variables ($x$, $y$, ...) \
->> • you can use function composition $f \cdot g$ and the parallel combinator $\langle f, g\rangle$ as well as
+> ***Problem requirements**: Given a name, for instance `"Jose Nuno Oliveira"` we
+> wish to obtain its acronym and its short version, as suggested below:*
+> ```
+> *Cp> acronym "Jose Nuno Oliveira"
+> "JNO"
+> *Cp> short "Jose Nuno Oliveira"
+> "Jose Oliveira"
+> *Cp>
+> ```
+>
+> *Define*
+> ```
+> acronym = ...
+> short = ...
+> ```
+>
+> *subject to the following restrictions: \
+> • you cannot use argument variables ($x$, $y$, ...) \
+> • you can use function composition $f \cdot g$ and the parallel combinator $\langle f, g\rangle$ as well as
 any function available from module $Cp.hs$ \
->> • you can resort to Haskell standard functions such as e.g. `map`, `filter` and so on.*
+> • you can resort to Haskell standard functions such as e.g. `map`, `filter` and so on.*
 
 ### Resolução 10
 
@@ -469,3 +469,5 @@ short = uncurry (++) . split head ((" " ++) . last) . words
   <img src=".assets/acronym.png" alt="Diagrama da função acronym">
   <img src=".assets/short.png" alt="Diagrama da função short">
 </div>
+
+$\square$

@@ -293,43 +293,44 @@ e veja se os resultados confirmam as suas respostas acima.
 ## Exercício 8
 
 > **Questão prática**
->> ***Problem requirements**: The following function:*
->>
->> ```haskell
->> func :: Eq a => b -> [(a, b)] -> (a -> b)
->> func b = (maybe b id .) . flip lookup
->> ```
->>
->> “functionalizes” *a finite list of (key, value) pairs by converting it to a function from keys to values.
->The first parameter provides a default value for keys that cannot be found in the list.*
->>
->> *As example, let us have a list of people (where the key is some numeric id):*
->>
->> ```haskell
->> a = [(140999000,"Manuel"), (200100300,"Mary"), (000111222,"Teresa")]
->> ```
->>
->> *their nationalities (if known):*
->>
->> ```haskell
->> b = [(140999000,"PT"), (200100300,"UK")]
->> ```
->>
->> *and places of residence (if known):*
->>
->> ```haskell
->> c = [(140999000,"Braga"), (200100300,"Porto"), (151999000,"Lisbon")]
->> ```
->>
->> *Using only $func$, $\langle f , g \rangle$, $\pi_1$, $\pi_2$, $map$ and $nub$,
->write a Haskell expression representing the following data aggregation:*
->>
->> Id        | Name      | Country | Residence
->> ----------|-----------|---------|-----------
->> 140999000 | Manuel    |PT       | Braga
->> 200100300 | Mary      |UK       | Porto
->> 000111222 | Teresa    |?        | -
->> 151999000 | (Unknown) |?        | Lisbon
+>
+> ***Problem requirements**: The following function:*
+>
+> ```haskell
+> func :: Eq a => b -> [(a, b)] -> (a -> b)
+> func b = (maybe b id .) . flip lookup
+> ```
+>
+> “functionalizes” *a finite list of (key, value) pairs by converting it to a function from keys to values.
+The first parameter provides a default value for keys that cannot be found in the list.*
+>
+> *As example, let us have a list of people (where the key is some numeric id):*
+>
+> ```haskell
+> a = [(140999000,"Manuel"), (200100300,"Mary"), (000111222,"Teresa")]
+> ```
+>
+> *their nationalities (if known):*
+>
+> ```haskell
+> b = [(140999000,"PT"), (200100300,"UK")]
+> ```
+>
+> *and places of residence (if known):*
+>
+> ```haskell
+> c = [(140999000,"Braga"), (200100300,"Porto"), (151999000,"Lisbon")]
+> ```
+>
+> *Using only $func$, $\langle f , g \rangle$, $\pi_1$, $\pi_2$, $map$ and $nub$,
+write a Haskell expression representing the following data aggregation:*
+>
+> Id        | Name      | Country | Residence
+> ----------|-----------|---------|-----------
+> 140999000 | Manuel    |PT       | Braga
+> 200100300 | Mary      |UK       | Porto
+> 000111222 | Teresa    |?        | -
+> 151999000 | (Unknown) |?        | Lisbon
 
 <div style="page-break-after: always;"></div>
 

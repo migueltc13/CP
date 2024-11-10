@@ -414,28 +414,29 @@ $$
 ## Exercício 10
 
 > **Questão prática**
->> ***Problem requirements**: The solution given for a previous problem,*
->>
->> $$store \; c = \text{take} \; 10 \cdot nub \cdot (c :)\tag{F15}$$
->>
->> *calls the standard function*
->>
->> ```haskell
->> nub :: (Eq a) => [a] -> [a]
->> ```
->>
->> *available from the [Data.List](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-List.html)
->library in Haskell.*
->>
->> *After inspecting the standard implementation of this function, define $f$ so that*
->>
->> $$\text{nub} = [nil, cons] \cdot f$$
->>
->> *is an alternative to the standard definition, where $nil \; \_ = [\;]$ and $cons \; (h,t) = h : t$.*
->>
->> *Check that $store \; c$ (F15) works properly once the standard $nub$ is replaced by yours.*
->>
->> ***Important**: Structure your solution across the
+>
+> ***Problem requirements**: The solution given for a previous problem,*
+>
+> $$store \; c = \text{take} \; 10 \cdot nub \cdot (c :)\tag{F15}$$
+>
+> *calls the standard function*
+>
+> ```haskell
+> nub :: (Eq a) => [a] -> [a]
+> ```
+>
+> *available from the [Data.List](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-List.html)
+library in Haskell.*
+>
+> *After inspecting the standard implementation of this function, define $f$ so that*
+>
+> $$\text{nub} = [nil, cons] \cdot f$$
+>
+> *is an alternative to the standard definition, where $nil \; \_ = [\;]$ and $cons \; (h,t) = h : t$.*
+>
+> *Check that $store \; c$ (F15) works properly once the standard $nub$ is replaced by yours.*
+>
+> ***Important**: Structure your solution across the
 $f \cdot g$, $\langle f, g \rangle$, $f \times g$, $[f, g]$ and $f + g$
 combinators that can be found in library [Cp.hs](https://haslab.github.io/CP/Material/).
 Use **diagrams** to plan your proposed solution, which should

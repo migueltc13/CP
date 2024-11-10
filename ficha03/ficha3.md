@@ -18,14 +18,14 @@ $\text{assocl} \cdot \text{assocr} = id$:
 $$
 \begin{align*}
 &\text{assocl} \cdot \text{assocr} = id \\
-&\equiv \text{\quad \small{(Def. assocl, 9: Fusão-×, 6: Universal-×, 1: Natural-id)}} \\
+&\equiv \tag{\small{Def. assocl, 9: Fusão-×, 6: Universal-×, 1: Natural-id}} \\
 &\left\{
 \begin{aligned}
 (id \times \pi_1) \cdot \text{assocr} = \pi_1 \\
 \pi_2 \cdot \pi_2 \cdot \text{assocr} = \pi_2
 \end{aligned}
 \right. \\
-&\equiv \text{\quad \small{(10: Def-×, 1: Natural-id, 9: Fusão-×, 6: Universal-×)}} \\
+&\equiv \tag{\small{10: Def-×, 1: Natural-id, 9: Fusão-×, 6: Universal-×}} \\
 &\left\{
 \begin{aligned}
 \left\{
@@ -37,7 +37,7 @@ $$
 \pi_2 \cdot \pi_2 \cdot \text{assocr} = \pi_2
 \end{aligned}
 \right. \\
-&\equiv \text{\quad \small{(6: Universal-×)}} \\
+&\equiv \tag{\small{6: Universal-×}} \\
 &\left\{
 \begin{aligned}
 \pi_1 \cdot \text{assocr} = \pi_1 \cdot \pi_1             \\
@@ -49,14 +49,14 @@ $$
 \right. \\
 \end{aligned}
 \right. \\
-&\equiv \text{\quad \small{(6: Universal-×)}} \\
+&\equiv \tag{\small{6: Universal-×}} \\
 &\left\{
 \begin{aligned}
 \pi_1 \cdot \text{assocr} = \pi_1 \cdot \pi_1             \\
 \pi_2 \cdot \text{assocr} = \langle \pi_2 \cdot \pi_1, \pi_2 \rangle
 \end{aligned}
 \right. \\
-&\equiv \text{\quad \small{(6: Universal-×, 1: Natural-id, 10: Def-×)}} \\
+&\equiv \tag{\small{6: Universal-×, 1: Natural-id, 10: Def-×}} \\
 &\text{assocr} = \langle \pi_1 \cdot \pi_1, \pi_2 \times id \rangle \tag{F1}
 \end{align*}
 $$
@@ -90,13 +90,13 @@ ghci> assocr (("Hi",True),3.14)
 $$
 \begin{align*}
 &assocr = \langle \pi_1 \cdot \pi_1, \pi_2 \times id \rangle \\
-&\equiv \tag{72: Ig. Ext.} \\
+&\equiv \tag{\small{72: Ig. Ext.}} \\
 &assocr \; ((a,b),c) = \langle \pi_1 \cdot \pi_1, \pi_2 \times id \rangle \; ((a,b),c) \\
-&\equiv \tag{77: Def-split} \\
+&\equiv \tag{\small{77: Def-split}} \\
 &assocr \; ((a,b),c) = (\pi_1 \cdot \pi_1 \; ((a,b),c), \pi_2 \times id \; ((a,b),c)) \\
-&\equiv \tag{78: Def-×, 74: Def-id} \\
+&\equiv \tag{\small{78: Def-×, 74: Def-id}} \\
 &assocr \; ((a,b),c) = (\pi_1 \cdot \pi_1 \; ((a,b),c), (\pi_2 \; (a,b), c)) \\
-&\equiv \tag{79: Def-proj, 73: Def-comp} \\
+&\equiv \tag{\small{79: Def-proj, 73: Def-comp}} \\
 &assocr \; ((a,b),c) = (a,(b,c)) \\
 \end{align*}
 $$
@@ -154,14 +154,14 @@ função constante $\underline{k}$ satisfaz.
 $$
 \begin{align*}
 &[\underline{k}, \underline{k}] = \underline{k} \\
-&\equiv \tag{17: Universal-+} \\
+&\equiv \tag{\small{17: Universal-+}} \\
 &\left\{
 \begin{aligned}
 \underline{k} \cdot i_1 = \underline{k} \\
 \underline{k} \cdot i_2 = \underline{k}
 \end{aligned}
 \right. \\
-&\equiv \tag{3: Fusão-const} \\
+&\equiv \tag{\small{3: Fusão-const}} \\
 &\left\{
 \begin{aligned}
 \underline{k} = \underline{k} \\
@@ -243,28 +243,28 @@ onde $i_1$ (resp. $i_2$) se escreve `Left` (resp. `Right`).
 $$
 \begin{align*}
 &[\langle \text{\underline{False}}, id \rangle, \langle \text{\underline{True}}, id \rangle] \\
-&= \tag{17: Universal-+} \\
+&= \tag{\small{17: Universal-+}} \\
 &\left\{
 \begin{aligned}
 &\alpha \cdot i_1 = \langle \text{\underline{False}}, id \rangle \\
 &\alpha \cdot i_2 = \langle \text{\underline{True}},  id \rangle
 \end{aligned}
 \right. \\
-&\equiv \tag{72: Ig. Ext.} \\
+&\equiv \tag{\small{72: Ig. Ext.}} \\
 &\left\{
 \begin{aligned}
 &(\alpha \cdot i_1) \; a = \langle \text{\underline{False}}, id \rangle \; a \\
 &(\alpha \cdot i_2) \; a = \langle \text{\underline{True}},  id \rangle \; a
 \end{aligned}
 \right. \\
-&\equiv \tag{73: Def-comp, 77: Def-split} \\
+&\equiv \tag{\small{73: Def-comp, 77: Def-split}} \\
 &\left\{
 \begin{aligned}
 &\alpha \; (i_1 \; a) = (\text{\underline{False}} \; a, id \; a) \\
 &\alpha \; (i_2 \; a) = (\text{\underline{True}}  \; a, id \; a)
 \end{aligned}
 \right. \\
-&\equiv \tag{75: Def-const, 74: Def-id} \\
+&\equiv \tag{\small{75: Def-const, 74: Def-id}} \\
 &\left\{
 \begin{aligned}
 &\alpha \; (i_1 \; a) = (\text{False}, a) \\
@@ -317,37 +317,37 @@ que a definição que conhece da função factorial,
 $$
 \begin{align*}
 &fac \cdot [\underline{0}, \text{succ}] = [\underline{1}, \text{mul} \cdot \langle \text{succ}, fac \rangle] \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &[fac \cdot \underline{0}, fac \cdot \text{succ}] = [\underline{1}, \text{mul} \cdot \langle \text{succ}, fac \rangle] \\
-&\equiv \tag{27: Eq-+} \\
+&\equiv \tag{\small{27: Eq-+}} \\
 &\left\{
 \begin{aligned}
 &fac \cdot \underline{0} = \underline{1} \\
 &fac \cdot \text{succ} = \text{mul} \cdot \langle \text{succ}, fac \rangle
 \end{aligned}
 \right. \\
-&\equiv \tag{72: Ig. Ext.} \\
+&\equiv \tag{\small{72: Ig. Ext.}} \\
 &\left\{
 \begin{aligned}
 &(fac \cdot \underline{0}) \; n = \underline{1} \; n \\
 &(fac \cdot \text{succ}) \; n = \text{mul} \cdot \langle \text{succ}, fac \rangle \; n
 \end{aligned}
 \right. \\
-&\equiv \tag{73: Def-comp, 75: Def-const} \\
+&\equiv \tag{\small{73: Def-comp, 75: Def-const}} \\
 &\left\{
 \begin{aligned}
 &fac \; 0 = 1 \\
 &fac \; (\text{succ} \; n) = \text{mul} \; (\langle \text{succ}, fac \rangle \; n)
 \end{aligned}
 \right. \\
-&\equiv \tag{Def. succ, 77: Def-split} \\
+&\equiv \tag{\small{Def. succ, 77: Def-split}} \\
 &\left\{
 \begin{aligned}
 &fac \; 0 = 1 \\
 &fac \; (n + 1) = \text{mul} \; (\text{succ} \; n, fac \; n)
 \end{aligned}
 \right. \\
-&\equiv \tag{Def. mul, Def succ} \\
+&\equiv \tag{\small{Def. mul, Def succ}} \\
 &\left\{
 \begin{aligned}
 &fac \; 0 = 1 \\
@@ -397,27 +397,27 @@ $\text{in}$,
 $$
 \begin{align*}
 &\text{out} \cdot \text{in} = id \\
-&\equiv \tag{Def. in} \\
+&\equiv \tag{\small{Def. in}} \\
 &\text{out} \cdot [\underline{0}, \text{succ}] = id \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &[\text{out} \cdot \underline{0}, \text{out} \cdot \text{succ}] = id \\
-&\equiv \tag{4: Absorção-const} \\
+&\equiv \tag{\small{4: Absorção-const}} \\
 &[\underline{\text{out} \; 0}, \text{out} \cdot \text{succ}] = id \\
-&\equiv \tag{17: Universal-+, 1: Natural-id} \\
+&\equiv \tag{\small{17: Universal-+, 1: Natural-id}} \\
 &\left\{
 \begin{aligned}
 &\underline{\text{out} \; 0} = i_1 \\
 &\text{out} \cdot \text{succ} = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{72: Ig. Ext.} \\
+&\equiv \tag{\small{72: Ig. Ext.}} \\
 &\left\{
 \begin{aligned}
 &\underline{\text{out} \; 0} \; () = i_1 \; () \\
 &\text{out} \cdot \text{succ} \; n = i_2 \; n
 \end{aligned}
 \right. \\
-&\equiv \tag{75: Def-const, Def. succ} \\
+&\equiv \tag{\small{75: Def-const, Def. succ}} \\
 &\left\{
 \begin{aligned}
 &\text{out} \; 0 = i_1 \; () \\
@@ -476,45 +476,45 @@ fac 5 = 120
 
 ## Exercício 9
 
-> **Questão prática** (...)
+> **Questão prática**
 >
 > **NB:** usa-se a notação $X^*$ para designar o tipo $[X]$ em Haskell.
 >
->> ***Problem requirements:***
->>
->> *The automatic generation of [bibliographies](http://www.bibtex.org/)
+> ***Problem requirements:***
+>
+> *The automatic generation of [bibliographies](http://www.bibtex.org/)
 in the LATEX text preparation system is based bibliographic databases
 from which the following information can be extracted:* \
->> $\qquad Bib = (Key \times Aut^*)^*$ \
->> *It associates authors $(Aut)$ to citation keys $(Key)$.*
->>
->> *Whenever LATEX processes a text document, it compiles all occurrences of citation keys in
+> $\qquad Bib = (Key \times Aut^*)^*$ \
+> *It associates authors $(Aut)$ to citation keys $(Key)$.*
+>
+> *Whenever LATEX processes a text document, it compiles all occurrences of citation keys in
 an auxiliary file* \
->> $\qquad Aux = (Pag \times Key^*)^*$ \
->> *associating pages $(Pag)$ to the citation keys that occur in them.*
->>
->> *An **author index** is an appendix to a text (e.g. book) indicating, in alphabetical order, the
+> $\qquad Aux = (Pag \times Key^*)^*$ \
+> *associating pages $(Pag)$ to the citation keys that occur in them.*
+>
+> *An **author index** is an appendix to a text (e.g. book) indicating, in alphabetical order, the
 names of authors mentioned and the ordered list of pages where their works are cited, for
 example:*
->>
->>> *Arbib, M. A. – 10, 11 \
->>> Bird, R. – 28 \
->>> Horowitz, E. – 2, 3, 15, 16, 19 \
->>> Hudak, P. – 11, 12, 29 \
->>> Jones, C. B. – 3, 7, 28 \
->>> Manes, E. G. – 10, 11 \
->>> Sahni, S. – 2, 3, 15, 16, 19 \
->>> Spivey, J.M. – 3, 7 \
->>> Wadler, P. – 2, 3*
->>
->> *The above structure can be represented by the type* \
->> $Ind = (Aut \times Pag^*)^*$ \
->> *listing authors $(Aut)$ and the respective pages where they are mentioned $(Pag)$.*
->>
->> *Write a Haskell function $mkInd : Bib \times Aux \to Ind$ that generates author indices
+>
+>> *Arbib, M. A. – 10, 11 \
+>> Bird, R. – 28 \
+>> Horowitz, E. – 2, 3, 15, 16, 19 \
+>> Hudak, P. – 11, 12, 29 \
+>> Jones, C. B. – 3, 7, 28 \
+>> Manes, E. G. – 10, 11 \
+>> Sahni, S. – 2, 3, 15, 16, 19 \
+>> Spivey, J.M. – 3, 7 \
+>> Wadler, P. – 2, 3*
+>
+> *The above structure can be represented by the type* \
+> $Ind = (Aut \times Pag^*)^*$ \
+> *listing authors $(Aut)$ and the respective pages where they are mentioned $(Pag)$.*
+>
+> *Write a Haskell function $mkInd : Bib \times Aux \to Ind$ that generates author indices
 $(Ind)$ from $Bib$ and $Aux$.*
->>
->> ***Important**: Structure your solution across the $f \cdot g$, $\langle f, g \rangle$ and $f \times g$
+>
+> ***Important**: Structure your solution across the $f \cdot g$, $\langle f, g \rangle$ and $f \times g$
 combinators that can be found in library [Cp.hs](https://haslab.github.io/CP/Material/).
 Use **diagrams** to plan your proposed solution, which should
 avoid re-inventing functions over lists already available in the Haskell
@@ -589,3 +589,5 @@ $$
 \small{Ind} & \xleftarrow{\qquad\qquad\qquad \text{groupPagByAut} \qquad\qquad\qquad} & \small{(Aut \times Pag)^*} \\
 \end{array}
 $$
+
+$\square$

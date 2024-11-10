@@ -28,30 +28,30 @@ a equação,
 $$
 \begin{align*}
 &\text{coassocl} \cdot [id + i_1, i_2 \cdot i_2] = id \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &[\text{coassocl} \cdot (id + i_1), \text{coassocl} \cdot (i_2 \cdot i_2)] = id \\
-&\equiv \tag{17: Universal-+, 1: Natural-id} \\
+&\equiv \tag{\small{17: Universal-+, 1: Natural-id}} \\
 &\left\{
 \begin{aligned}
 &\text{coassocl} \cdot (id + i_1) = i_1 \\
 &\text{coassocl} \cdot i_2 \cdot i_2 = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{21: Def-+, 1: Natural-id} \\
+&\equiv \tag{\small{21: Def-+, 1: Natural-id}} \\
 &\left\{
 \begin{aligned}
 &\text{coassocl} \cdot [i_1, i_2 \cdot i_1] = i_1 \\
 &\text{coassocl} \cdot i_2 \cdot i_2 = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &\left\{
 \begin{aligned}
 &[\text{coassocl} \cdot i_1, \text{coassocl} \cdot i_2 \cdot i_1] = i_1 \\
 &\text{coassocl} \cdot i_2 \cdot i_2 = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{17: Universal-+} \\
+&\equiv \tag{\small{17: Universal-+}} \\
 &\left\{
 \begin{aligned}
 &\text{coassocl} \cdot i_1 = i_1 \cdot i_1 \\
@@ -59,16 +59,16 @@ $$
 &\text{coassocl} \cdot i_2 \cdot i_2 = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{17: Universal-+} \\
+&\equiv \tag{\small{17: Universal-+}} \\
 &\left\{
 \begin{aligned}
 &\text{coassocl} \cdot i_1 = i_1 \cdot i_1 \\
 &\text{coassocl} \cdot i_2 = [i_1 \cdot i_2, i_2]
 \end{aligned}
 \right. \\
-&\equiv \tag{17: Universal-+} \\
+&\equiv \tag{\small{17: Universal-+}} \\
 &\text{coassocl} = [i_1 \cdot i_1, [i_1 \cdot i_2, i_2]] \\
-&\equiv \tag{21: Def-+, 1: Natural-id} \\
+&\equiv \tag{\small{21: Def-+, 1: Natural-id}} \\
 &\text{coassocl} = [i_1 \cdot i_1, i_2 + id] \\
 \\[1em]
 \end{align*}
@@ -135,18 +135,18 @@ $\text{in} \cdot \text{out}$ e tire conclusões.
 $$
 \begin{align*}
 &\text{out} \cdot \text{in} = id \\
-&\equiv \tag{F1: Def. in} \\
+&\equiv \tag{\small{F1: Def. in}} \\
 &\text{out} \cdot [Leaf, Fork] = id \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &[\text{out} \cdot Leaf, \text{out} \cdot Fork] = id \\
-&\equiv \tag{17: Universal-+, 1: Natural-id} \\
+&\equiv \tag{\small{17: Universal-+, 1: Natural-id}} \\
 &\left\{
 \begin{aligned}
 &\text{out} \cdot Leaf = i_1 \\
 &\text{out} \cdot Fork = i_2
 \end{aligned}
 \right. \\
-&\equiv \tag{72: Ig. Ext., 73: Def-comp} \\
+&\equiv \tag{\small{72: Ig. Ext., 73: Def-comp}} \\
 &\left\{
 \begin{aligned}
 &\text{out} \; (Leaf \; a) = i_1 \; a \\
@@ -280,21 +280,21 @@ $$
 \end{align*}
 \quad \equiv \quad
 \nabla = [id, id]
-\tag{17: Universal-+}
+\tag{\small{17: Universal-+}}
 $$
 
 $$
 \begin{align*}
 &f \cdot \nabla = \nabla \cdot (f + f) \\
-&\equiv \tag{Def. ∇} \\
+&\equiv \tag{\small{Def. ∇}} \\
 &f \cdot \nabla = [id, id] \cdot (f + f) \\
-&\equiv \tag{22: Absorção-+} \\
+&\equiv \tag{\small{22: Absorção-+}} \\
 &f \cdot \nabla = [id \cdot f, id \cdot f] \\
-&\equiv \tag{1: Natural-id} \\
+&\equiv \tag{\small{1: Natural-id}} \\
 &f \cdot \nabla = [f \cdot id, f \cdot id] \\
-&\equiv \tag{20: Fusão-+} \\
+&\equiv \tag{\small{20: Fusão-+}} \\
 &f \cdot \nabla = f \cdot [id, id] \\
-&\equiv \tag{Def. ∇} \\
+&\equiv \tag{\small{Def. ∇}} \\
 &f \cdot \nabla = f \cdot \nabla \qquad \text{c.q.m.}
 \end{align*}
 $$
@@ -333,11 +333,11 @@ $$
 $$
 \begin{align*}
 &(f + h) \cdot \alpha = \alpha \cdot (f + g \times h) \\
-&\equiv \tag{Dedução da def. α} \\
+&\equiv \tag{\small{Dedução da def. α}} \\
 &(f + h) \cdot (id + \pi_2) = (id + \pi_2) \cdot (f + g \times h) \\
-&\equiv \tag{25: Functor-+} \\
+&\equiv \tag{\small{25: Functor-+}} \\
 &(f \cdot id) + (h \cdot \pi_2) = (id \cdot f) + (\pi_2 \cdot (g \times h)) \\
-&\equiv \tag{1: Natural-id, 13: Natural-$\pi_2$} \\
+&\equiv \tag{\small{1: Natural-id, 13: Natural-$\pi_2$}} \\
 &f + (h \cdot \pi_2) = f + (h \cdot \pi_2) \qquad \text{c.q.d.}
 \end{align*}
 $$
@@ -389,9 +389,9 @@ $$
 $$
 \begin{align*}
 &h \cdot \text{distr} \cdot (g \times (id + \alpha)) = k \\
-&\equiv \tag{Prop. grátis de distr} \\
+&\equiv \tag{\small{Prop. grátis de distr}} \\
 &h \cdot ((g \times id) + (g \times \alpha)) \cdot \text{distr} = k \\
-&\equiv \tag{F8 [a.k.a.] 33: Shunt-left} \\
+&\equiv \tag{\small{F8 [a.k.a.] 33: Shunt-left}} \\
 &h \cdot ((g \times id) + (g \times \alpha)) = k \cdot \text{undistr}
 \\[0.5em]
 &\text{c.q.m.}
@@ -419,14 +419,14 @@ conforme desenhado no respectivo diagrama:
 $$
 \begin{align*}
 &[\langle f, g \rangle, \langle h, k \rangle] = \langle [f, h], [g, k] \rangle \\
-&= \tag{6: Universal-$\times$} \\
+&= \tag{\small{6: Universal-$\times$}} \\
 &\left\{
 \begin{aligned}
 &[f, h] = \pi_1 \cdot [\langle f, g \rangle, \langle h, k \rangle] \\
 &[g, k] = \pi_2 \cdot [\langle f, g \rangle, \langle h, k \rangle]
 \end{aligned}
 \right. \\
-&= \tag{20: Fusão-+, 7: Cancelamento-$\times$} \\
+&= \tag{\small{20: Fusão-+, 7: Cancelamento-$\times$}} \\
 &\left\{
 \begin{aligned}
 &[f, h] = [f, h] \\
@@ -441,25 +441,25 @@ $$
 ## Exercício 10
 
 > **Questão prática**
->> ***Problem requirements:***
->>
->> *Well-known services such as Google Maps, Google Analytics, YouTube, MapReduce etc.
+> ***Problem requirements:***
+>
+> *Well-known services such as Google Maps, Google Analytics, YouTube, MapReduce etc.
 run on top of [Bigtable](https://en.wikipedia.org/wiki/Bigtable) or successors thereof.
 Such data systems rely on the so-called [key-value](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
 NoSQL data model, which is widely adopted because of its efficiency and flexibility.*
->>
->> *Key-value stores can be regarded abstractly as lists of pairs $(K \times V)^*$
+>
+> *Key-value stores can be regarded abstractly as lists of pairs $(K \times V)^*$
 in which $K$ is a datatype of* keys *and $V$ is a type of data* values.
 *Keys uniquely identify values. Key-value stores with the same type $V$
 of values can be glued together as the diagram suggests,*
->>
->> <div align="center">
->>   <img src=".assets/e-10.png" width="65%" alt="Diagrama 10">
->> </div>
->>
->> *where $unglue$ performs the action opposite to $glue$.*
->>
->> *Define $glue$ and $unglue$ in Haskell structured along the functional combinators
+>
+> <div align="center">
+>   <img src=".assets/e-10.png" width="65%" alt="Diagrama 10">
+> </div>
+>
+> *where $unglue$ performs the action opposite to $glue$.*
+>
+> *Define $glue$ and $unglue$ in Haskell structured along the functional combinators
 ($f \cdot g$, $\langle f, g \rangle$, $f \times g$, and so on) studied in this course
 and available from library [Cp.hs](https://haslab.github.io/CP/Material/).
 Use **diagrams** to plan your solutions, in which you should avoid re-inventing functions over

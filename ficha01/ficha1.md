@@ -144,9 +144,9 @@ $$
 
 $$
 \begin{align*}
-(f \cdot g) \; x &= f \; (g \; x) \tag{F1}           \\
-                 &= f \; (x + 1)  \tag{Def. \( g \)} \\
-                 &= 2 *  (x + 1)  \tag{Def. \( f \)} \\
+(f \cdot g) \; x &= f \; (g \; x) \tag{\small{F1}}           \\
+                 &= f \; (x + 1)  \tag{\small{Def. \( g \)}} \\
+                 &= 2 *  (x + 1)  \tag{\small{Def. \( f \)}} \\
                  &= 2x + 2
 \end{align*}
 $$
@@ -170,9 +170,9 @@ $$
 
 $$
 \begin{align*}
-(f \cdot g) \; x &= f \; (g \; x)       \tag{F1}           \\
-                 &= f \; (2 * x)        \tag{Def. \( g \)} \\
-                 &= \text{succ }(2 * x) \tag{Def. \( f \)} \\
+(f \cdot g) \; x &= f \; (g \; x)       \tag{\small{F1}}           \\
+                 &= f \; (2 * x)        \tag{\small{Def. \( g \)}} \\
+                 &= \text{succ }(2 * x) \tag{\small{Def. \( f \)}} \\
                  &= 2x + 1
 \end{align*}
 $$
@@ -194,8 +194,8 @@ $$
 
 $$
 \begin{align*}
-f &= \text{succ} &\equiv \forall x, \; f \; x &= \text{succ } x \tag{Igualdade extensional} \\
-g &= (2 *)       &\equiv \forall x, \; g \; x &= 2 * x          \tag{Igualdade extensional}
+f &= \text{succ} &\equiv \forall x, \; f \; x &= \text{succ } x \tag{\small{Igualdade extensional}} \\
+g &= (2 *)       &\equiv \forall x, \; g \; x &= 2 * x          \tag{\small{Igualdade extensional}}
 \end{align*}
 $$
 
@@ -212,9 +212,9 @@ $$
 
 $$
 \begin{align*}
-(f \cdot g) \; x &= f \; (g \; x)                    \tag{F1}           \\
-                 &= f \; (\text{length} \; x)        \tag{Def. \( g \)} \\
-                 &= \text{succ }(\text{length} \; x) \tag{Def. \( f \)}
+(f \cdot g) \; x &= f \; (g \; x)                    \tag{\small{F1}}           \\
+                 &= f \; (\text{length} \; x)        \tag{\small{Def. \( g \)}} \\
+                 &= \text{succ }(\text{length} \; x) \tag{\small{Def. \( f \)}} \\
 \end{align*}
 $$
 
@@ -240,10 +240,10 @@ $$
 
 $$
 \begin{align*}
-(f \cdot g) \; x &= f \; (g \; (x,y))                    \tag{F1}           \\
-                 &= f \; (x + y)                         \tag{Def. \( g \)} \\
-                 &= (\text{succ} \cdot (2 *)) \; (x + y) \tag{Def. \( f \)} \\
-                 &= \text{succ }(2 * (x + y))                               \\
+(f \cdot g) \; x &= f \; (g \; (x,y))                    \tag{\small{F1}}           \\
+                 &= f \; (x + y)                         \tag{\small{Def. \( g \)}} \\
+                 &= (\text{succ} \cdot (2 *)) \; (x + y) \tag{\small{Def. \( f \)}} \\
+                 &= \text{succ }(2 * (x + y))                                       \\
                  &= 2x + 2y + 1
 \end{align*}
 $$
@@ -254,11 +254,11 @@ $$
 
 $$
 \begin{align*}
-g \; (x,y)  &= x + y                                                      \\
-            &= (+) \; x \; y                                              \\
-            &= \text{uncurry} \; (+) \; (x,y)                             \\
-            &\equiv                           \tag{Igualdade extensional} \\
-g \;        &= \text{uncurry} \; (+)                                      \\
+g \; (x,y)  &= x + y                                                              \\
+            &= (+) \; x \; y                                                      \\
+            &= \text{uncurry} \; (+) \; (x,y)                                     \\
+            &\equiv                           \tag{\small{Igualdade extensional}} \\
+g \;        &= \text{uncurry} \; (+)                                              \\
 \text{Logo }
 (f \cdot g) &= \text{succ} \cdot (2 *) \cdot (\text{uncurry} \; (+))
 \end{align*}
@@ -275,11 +275,11 @@ quaisquer que sejam $f$, $g$ e $h$.
 
 $$
 \begin{align*}
-((f \cdot g) \cdot h) \; x &= (f \cdot g) \; (h \; x) \tag{F1} \\
-                           &= f \; (g \; (h \; x))    \tag{F1} \\
+((f \cdot g) \cdot h) \; x &= (f \cdot g) \; (h \; x) \tag{\small{F1}} \\
+                           &= f \; (g \; (h \; x))    \tag{\small{F1}} \\
 \\
-(f \cdot (g \cdot h)) \; x &= f \; ((g \cdot h) \; x) \tag{F1} \\
-                           &= f \; (g \; (h \; x))    \tag{F1} \\
+(f \cdot (g \cdot h)) \; x &= f \; ((g \cdot h) \; x) \tag{\small{F1}} \\
+                           &= f \; (g \; (h \; x))    \tag{\small{F1}} \\
 \end{align*}
 $$
 
@@ -297,15 +297,15 @@ $$
 $$
 \begin{align*}
 \text{Assume-se que} \quad
-&(f \cdot g) \cdot h = f \cdot (g \cdot h)                                                     \\
-&\equiv                                                            \tag{Igualdade extensional} \\
-&\forall x, \; ((f \cdot g) \cdot h) \; x = (f \cdot (g \cdot h)) \; x                         \\
-&\equiv                                                            \tag{F1}                    \\
-&(f \cdot g) \cdot (h \; x) = f \; ((g \cdot h) \; x)                                          \\
-&\equiv                                                            \tag{F1}                    \\
-&f \; (g \; (h \; x)) = f \; (g \; (h \; x))                                                   \\
-&\equiv                                                                                        \\
-&\text{True}                                                                                   \\
+&(f \cdot g) \cdot h = f \cdot (g \cdot h)                                                             \\
+&\equiv                                                            \tag{\small{Igualdade extensional}} \\
+&\forall x, \; ((f \cdot g) \cdot h) \; x = (f \cdot (g \cdot h)) \; x                                 \\
+&\equiv                                                            \tag{\small{F1}}                    \\
+&(f \cdot g) \cdot (h \; x) = f \; ((g \cdot h) \; x)                                                  \\
+&\equiv                                                            \tag{\small{F1}}                    \\
+&f \; (g \; (h \; x)) = f \; (g \; (h \; x))                                                           \\
+&\equiv                                                                                                \\
+&\text{True}                                                                                           \\
 \text{Logo }
 &(f \cdot g) \cdot h = f \cdot (g \cdot h)
 \end{align*}
@@ -315,31 +315,31 @@ $$
 
 ## Exercício 6
 
-> A função $\text{id} :: a \to a$ é tal que $\text{id} \; x = x$.
+> A função $id :: a \to a$ é tal que $id \; x = x$.
 >
-> Mostre que $f \cdot \text{id} = \text{id} \cdot f = f$ qualquer que seja $f$.
+> Mostre que $f \cdot id = id \cdot f = f$ qualquer que seja $f$.
 
 ### Resolução 6
 
 $$
 \begin{align*}
-(f \cdot \text{id}) \; x &= f \; (\text{id} \; x)    \tag{F1}                    \\
-                         &= f \; x                   \tag{Def. \(\text{id}\)}    \\
-                         &= \text{id} \; (f \; x)    \tag{Def. \(\text{id}\)}    \\
-                         &= (\text{id} \cdot f) \; x \tag{F1}
+(f \cdot id) \; x &= f \; (id \; x)    \tag{\small{F1}}          \\
+                  &= f \; x            \tag{\small{Def. $id$}} \\
+                  &= id \; (f \; x)    \tag{\small{Def. $id$}} \\
+                  &= (id \cdot f) \; x \tag{\small{F1}}
 \end{align*}
 $$
 
 $$
 \begin{align*}
 \text{Como }
-&\forall x \in \text{Dom}(f), \; (f \cdot \text{id}) \; x = (\text{id} \cdot f) \; x \\
+&\forall x \in \text{Dom}(f), \; (f \cdot id) \; x = (id \cdot f) \; x \\
 \text{implica, por ig. extensional, que }
-&f \cdot \text{id} = \text{id} \cdot f \\
+&f \cdot id = id \cdot f \\
 \text{e pela definição de id temos que }
-&f \cdot \text{id} = f \\
+&f \cdot id = f \\
 \text{então }
-&f \cdot \text{id}        = \text{id} \cdot f = f
+&f \cdot id = id \cdot f = f
 \end{align*}
 $$
 
@@ -347,18 +347,18 @@ $$
 
 $$
 \begin{align*}
-(f \cdot \text{id}) \; x &= f \; (\text{id} \; x) \tag{F1}                    \\
-                         &= f \; x                \tag{Def. \(\text{id}\)}    \\
-                         &\equiv                  \tag{Igualdade extensional} \\
-f \cdot \text{id}        &= f                                                 \\
+(f \cdot id) \; x &= f \; (id \; x) \tag{\small{F1}}                    \\
+                  &= f \; x         \tag{\small{Def. $id$}}             \\
+                  &\equiv           \tag{\small{Igualdade extensional}} \\
+f \cdot id        &= f                                                  \\
 \\
-(\text{id} \cdot f) \; x &= \text{id} \; (f \; x) \tag{F1}                    \\
-                         &= f \; x                \tag{Def. \(\text{id}\)}    \\
-                         &\equiv                  \tag{Igualdade extensional} \\
-\text{id} \cdot f        &= f                                                 \\
+(id \cdot f) \; x &= id \; (f \; x) \tag{\small{F1}}                    \\
+                  &= f \; x         \tag{\small{Def. $id$}}             \\
+                  &\equiv           \tag{\small{Igualdade extensional}} \\
+id \cdot f        &= f                                                  \\
 \\
 \text{Logo }
-f \cdot \text{id}        &= \text{id} \cdot f = f
+f \cdot id &= id \cdot f = f
 \end{align*}
 $$
 
@@ -499,3 +499,4 @@ para que esta funcione corretamente.
 
 A propriedade de Haskell evidenciada neste exemplo é o **polimorfismo paramétrico**.
 
+$\square$
