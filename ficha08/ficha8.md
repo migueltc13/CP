@@ -5,10 +5,67 @@
 > A igualdade que se segue
 >
 > $$
-> f \cdot \text{length} = \lb [\text{zero} , (2+) \cdot \pi_2] \rb
+> f \cdot \text{length} = \lb [\text{zero}, (2+) \cdot \pi_2] \rb
 > $$
 >
 > verifica-se para $f = (2\ast)$ ou $f = (2+)$? Use a lei de fusão-cata para justificar, por cálculo, a sua resposta.
+
+### Resolução 1
+
+$$
+\text{length} = \lb [\text{zero}, \text{succ} \cdot \pi_2] \rb
+\\[2em]
+$$
+
+$$
+\begin{align*}
+&f \cdot \text{length} =  \lb [\text{zero} , (2+) \cdot \pi_2] \rb \\
+&\equiv \tag{\small{Def. length, Def. zero (2×)}} \\
+&f \cdot \lb [\underline{0}, \text{succ} \cdot \pi_2] \rb = \lb [\underline{0}, (2+) \cdot \pi_2] \rb \\
+&\Leftarrow \tag{\small{49: Fusão-cata, $\text{F}_{\text{List}} \; f = id + id \times f$}} \\
+&f \cdot [\underline{0}, \text{succ} \cdot \pi_2] = [\underline{0}, (2+) \cdot \pi_2] \cdot (id + id \times f) \\
+&\equiv \tag{\small{20: Fusão-+, 22: Absorção-+, 1: Natural-id}} \\
+&[f \cdot \underline{0}, f \cdot \text{succ} \cdot \pi_2] = [\underline{0}, (2+) \cdot \pi_2 \cdot (id \times f)] \\
+&\equiv \tag{\small{13: Natural-$\pi_2$, 27: Eq-+}} \\
+&\begin{cases}
+f \cdot \underline{0} = \underline{0} \\
+f \cdot \text{succ} \cdot \pi_2 = (2+) \cdot f \cdot \pi_2
+\end{cases} \\
+&\equiv \tag{\small{72: Ig. Ext., 73: Def-comp, 75: Def-const}} \\
+&\begin{cases}
+f \; 0 = 0 \\
+f \; (\text{succ} \; (\pi_2 \; (\_,n))) = 2 + f \; (\pi_2 \; (\_,n))
+\end{cases} \\
+&\equiv \tag{\small{79: Def-proj, Def. succ}} \\
+&\begin{cases}
+f \; 0 = 0 \\
+f \; (n+1) = 2 + f \; n
+\end{cases} \\
+\end{align*}
+$$
+
+$$
+\\[2em]
+\begin{align*}
+&\text{Hipótese 1:} \quad f = (2+) \\
+&\begin{cases}
+2 + 0 = 2 \\
+2 + (n + 1) = 2 + (2 + n)
+\end{cases} \\
+&\equiv \\
+&\text{False}
+\end{align*}
+\hspace{4em}
+\begin{align*}
+&\text{Hipótese 2:} \quad f = (2*) \\
+&\begin{cases}
+2 * 0 = 2 \\
+2 * (n + 1) = 2 + (2 * n)
+\end{cases} \\
+&\equiv \\
+&\text{True}
+\end{align*}
+$$
 
 ## Exercício 2
 
