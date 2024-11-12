@@ -417,7 +417,7 @@ $$
 >
 > ***Problem requirements**: The solution given for a previous problem,*
 >
-> $$store \; c = \text{take} \; 10 \cdot nub \cdot (c :)\tag{F15}$$
+> $$store \; c = \text{take} \; 10 \cdot nub \cdot (\text{$c$:})\tag{F15}$$
 >
 > *calls the standard function*
 >
@@ -445,6 +445,38 @@ avoid re-inventing functions over lists already available in the Haskell
 
 ### Resolução 10
 
-**TODO**
+```haskell
+import Cp (i1, i2, (-|-), (><), nil, cons)
+
+-- Point-wise aux
+aux :: Eq a => [a] -> Either () (a, [a])
+aux [] = i1 ()
+aux (h:t) = i2 (h, filter (h /=) t)
+
+nub :: Eq a => [a] -> [a]
+nub = either nil cons . (id -|- (id >< nub)) . aux
+
+-- Tests
+test = null (nub ([] :: [Int])) && -- equivalent: nub ([] :: [Int]) == []
+       nub [1,2,3,4,1,2,3,4,1,2,3,4] == [1,2,3,4]
+
+store c = take 10 . nub . (c:)
+```
+
+```haskell
+-- Versão alternativa da função aux point-free
+import Cp (i1, i2, p1, p2, split, (-|-), (><), nil, cons)
+
+aux :: Eq a => [a] -> Either () (a, [a])
+aux = either (const (i1 ())) (i2 . split p1 (uncurry filter')) . unconsToEither
+  where
+    unconsToEither [] = Left ()
+    unconsToEither (h:t) = Right (h, t)
+    filter' h = filter (h /=)
+```
+
+<div align="center">
+    <img src="exe10/nub.png" width="50%" alt="Diagrama da solução do Exercício 10">
+</div>
 
 $\square$
