@@ -273,3 +273,84 @@ $\square$
 > T \; f                \quad &=     \quad (u \cdot f) \bullet id \tag{F18}
 > \end{align*}
 > $$
+
+### Resolução 7
+
+$$
+\text{F15}
+$$
+
+$$
+\begin{align*}
+&id \bullet id \\
+&=\tag{\small{66: Composição monádica}} \\
+&\mu \cdot T \; id \cdot id \\
+&=\tag{\small{45: Functor-id-F}} \\
+&\mu \cdot id \cdot id \\
+&=\tag{\small{1: Natural-id (2×)}} \\
+&\mu
+\end{align*}
+$$
+
+<div style="page-break-after: always;"></div>
+
+$$
+\\[2em]
+\text{F16}
+$$
+
+$$
+\begin{align*}
+&f \bullet u \\
+&=\tag{\small{66: Composição monádica}} \\
+&\mu \cdot T \; f \cdot u \\
+&=\tag{\small{64: Natural-$u$}} \\
+&\mu \cdot u \cdot f \\
+&=\tag{\small{63: Unidade, 1: Natural-id}} \\
+&f
+\end{align*}
+$$
+
+$$
+\begin{align*}
+&u \bullet f \\
+&=\tag{\small{66: Composição monádica}} \\
+&\mu \cdot T \; u \cdot f \\
+&=\tag{\small{63: Unidade, 1: Natural-id}} \\
+&f
+\end{align*}
+$$
+
+$$
+\\[2em]
+\text{F17}
+$$
+
+$$
+\begin{align*}
+&(f \cdot g) \bullet h \\
+&=\tag{\small{66: Composição monádica}} \\
+&\mu \cdot T \; (f \cdot g) \cdot h \\
+&=\tag{\small{44: Functor-F, 2: Assoc-comp}} \\
+&\mu \cdot T \; f \cdot (T \; g \cdot h) \\
+&=\tag{\small{66: Composição monádica}} \\
+&f \bullet (T \; g \cdot h)
+\end{align*}
+$$
+
+$$
+\\[2em]
+\text{F18}
+$$
+
+$$
+\begin{align*}
+&(u \cdot f) \bullet id \\
+&=\tag{\small{66: Composição monádica}} \\
+&\mu \cdot T \; (u \cdot f) \cdot id \\
+&=\tag{\small{44: Functor-F, 1: Natural-id}} \\
+&\mu \cdot T \; u \cdot T \; f \\
+&=\tag{\small{63: Unidade, 1: Natural-id}} \\
+&T \; f
+\end{align*}
+$$
