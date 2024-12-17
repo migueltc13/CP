@@ -153,7 +153,7 @@ par \cdot \text{in} = k \cdot \textbf{F} \; \langle impar, par \rangle
 &\equiv \tag{\small{28: Lei da troca}} \\
 &\langle impar, par \rangle = \lb [\langle \underline{\text{false}}, \underline{\text{true}} \rangle, \langle \pi_2, \pi_1 \rangle] \rb \\
 &\equiv \tag{\small{Def. swap, $\langle \underline{a}, \underline{b} \rangle = \underline{(a, b)}$}} \\
-&\langle impar, par \rangle = \lb [\underline{(\text{false}, \text{true})}, \text{swap}] \\
+&\langle impar, par \rangle = \lb [\underline{(\text{false}, \text{true})}, \text{swap}] \rb \\
 &\equiv \tag{\small{$\text{for} \; b \; i = \lb [\underline{i}, b] \rb$}} \\
 &\langle impar, par \rangle = \text{for} \; \text{swap} \; (\text{FALSE}, \text{TRUE})
 \end{align*}
