@@ -257,7 +257,7 @@ insg \cdot \text{in} = k \cdot \textbf{F} \; \langle \text{succ}, insg \rangle
 &\equiv \tag{\small{53: Fokkinga}} \\
 &\langle insg, fsuc \rangle = \lb \langle h, k \rangle \rb \\
 &\equiv \tag{\small{Def. k, Def. h}} \\
-&\langle insg, fsuc \rangle = \lb \langle [\underline{1}, \text{succ} \cdot \pi_1], [\text{nil}, \text{cons}] \rb \\
+&\langle insg, fsuc \rangle = \lb \langle [\underline{1}, \text{succ} \cdot \pi_1], [\text{nil}, \text{cons}] \rangle \rb \\
 &\equiv \tag{\small{28: Lei da troca, Def. nil}} \\
 &\langle insg, fsuc \rangle = \lb [\langle \underline{1}, \underline{[\;]} \rangle, \langle \text{succ} \cdot \pi_1, \text{cons} \rangle] \rb \\
 &\equiv \tag{\small{$\langle \underline{a}, \underline{b} \rangle = \underline{(a, b)}$, Def. for}} \\
