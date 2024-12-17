@@ -254,7 +254,7 @@ $$
 
 ## Exercício 6
 
-> Considere o catamorfismo $rep \; f = \lb [id, (f \cdot)] \rb$.
+> Considere o catamorfismo $rep \; f = \lb [\underline{id}, (f \cdot)] \rb$.
 Comece por fazer um diagrama do catamorfismo e responda:
 >
 > Qual é o tipo de $rep$? O que faz $rep$?
@@ -265,7 +265,25 @@ e veja se os resultados confirmam as suas respostas acima.
 
 ### Resolução 6
 
-**TODO**
+```haskell
+rep f = cataNat (either (const id) (f .))
+```
+
+$$
+\begin{align*}
+\text{Tipo de } rep: \quad &(A \to A) \to \mathbb{N_0} \to A \to A \\
+\text{O que faz } rep \; f \; n \; x: \quad &\text{Aplica a função $f$ a $x$ $n$ vezes.}
+\end{align*}
+$$
+
+```haskell
+ghci> rep ("a"++) 10 "b"
+"aaaaaaaaaab"
+ghci> rep (2*) 0 3
+3
+ghci> rep (2*) 10 1
+1024
+```
 
 <div style="page-break-after: always;"></div>
 
@@ -286,7 +304,13 @@ e veja se os resultados confirmam as suas respostas acima.
 
 ### Resolução 7
 
-**TODO**
+```c
+int times(int a, int n) {
+  int r = 0;
+  for (int j = 1; j < n + 1; j++) { r += a; }
+  return r;
+}
+```
 
 <div style="page-break-after: always;"></div>
 
