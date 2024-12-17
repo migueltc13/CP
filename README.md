@@ -10,6 +10,7 @@
 - [Ficha  6](ficha06/ficha6.pdf)
 - [Ficha  7](ficha07/ficha7.pdf)
 - [Ficha  8](ficha08/ficha8.pdf)
+- [Ficha  9](ficha09/ficha9.pdf)
 - [Ficha 11](ficha11/ficha11.pdf)
 
 ## Testes
