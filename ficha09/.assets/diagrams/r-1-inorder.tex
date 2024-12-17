@@ -1,0 +1,8 @@
+\[
+\xymatrix{
+    \text{BTree} \; A \ar[rr]^{\hspace{-2em}\text{out}} \ar[d]_{inorder} & & 1 + A \times (\text{BTree} \; A)^2 \ar[d]^{id + id \times inorder^2} \\
+    A^* & & 1 + A \times (A^* \times A^*) \ar[ll]_{\hspace{-2em}[\text{nil}, g_2]} \\
+}
+
+\hspace{6em} \text{where} \quad g_2 \; (a, (l,r)) = l \text{ ++ } [a] \text{ ++ } r
+\]

@@ -1,0 +1,12 @@
+\[
+\xymatrix{
+    \text{BTree} \; A \ar[rr]^{\hspace{-2em}\text{out}} \ar[d]_{mirror} & & 1 + A \times (\text{BTree} \; A)^2 \ar[d]^{id + id \times mirror^2} \\
+    A^* & & 1 + A \times (A^* \times A^*) \ar[ll]_{\hspace{-2em}[g_1, g_2]} \\
+}
+
+\hspace{6em} \text{where} \quad
+\begin{cases}
+    g_1 = \underline{\text{Empty}} \\
+    g_2 = \text{Node} \cdot (id \times \text{swap}) \\
+\end{cases}
+\]
