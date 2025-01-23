@@ -13,7 +13,7 @@ data FTree a c = Unit c | Comp a (FTree a c, FTree a c) deriving Show
 inFTree = either Unit (uncurry Comp)
 
 outFTree (Unit c)         = Left c
-outFTree (Comp a (t1,t2)) = Right(a,(t1,t2))
+outFTree (Comp a (t1,t2)) = Right (a,(t1,t2))
 
 baseFTree f g h  = f -|- (g  >< (h >< h))
 
@@ -21,9 +21,9 @@ baseFTree f g h  = f -|- (g  >< (h >< h))
 
 recFTree f = baseFTree id id f
 
-cataFTree a = a . (recFTree (cataFTree a)) . outFTree
+cataFTree a = a . recFTree (cataFTree a) . outFTree
 
-anaFTree f = inFTree . (recFTree (anaFTree f) ) . f
+anaFTree f = inFTree . recFTree (anaFTree f) . f
 
 hyloFTree a c = cataFTree a . anaFTree c
 
@@ -54,7 +54,7 @@ genBoolTree = anaFTree gbt
 
 gbt = f where
    f(0,x)=i1 x
-   f(n+1,x) = i2(x,((n,False:x),(n,True:x)))
+   f(n+1,x) = i2 (x,((n,False:x),(n,True:x)))
 
 genBools = hyloFTree flt gbt
 

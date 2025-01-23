@@ -1,4 +1,7 @@
 
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use camelCase" #-}
+
 -- (c) MP-I (1998/9-2006/7) and CP (2005/6-2024/25)
 
 module LTree where
@@ -191,14 +194,14 @@ instance Applicative LTree where
 
 -- (9) Spine representation --------------------------------------------------
 
-roll = inLTree.(id -|- roll>< id).beta.(id><outList')
+-- roll = inLTree.(id -|- roll>< id).beta.(id><outList')
 
-spinecata g = g . (id -|- (spinecata g)>< id).spineOut
+-- spinecata g = g . (id -|- (spinecata g)>< id).spineOut
 
-spineOut = beta.(id><outList')
+-- spineOut = beta.(id><outList')
 
-outList' [] = i1()
-outList' x = i2(last x, blast x)
+-- outList' [] = i1()
+-- outList' x = i2(last x, blast x)
 
 inList' = either nil snoc
 

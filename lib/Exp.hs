@@ -29,7 +29,7 @@ baseExp f g h = f -|- (g >< map h)
 
 -- (2) Ana + cata + hylo -------------------------------------------------------
 
-recExp x = baseExp id id x
+recExp = baseExp id id
 
 cataExp g = g . recExp (cataExp g) . outExp
 
@@ -220,4 +220,3 @@ mopen = ("open    "++)
 open = mopen 
 
 expShow fn e = do { expDisplay fn (mirrorExp e) ; system(open fn) }
-
